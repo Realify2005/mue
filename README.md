@@ -1,1 +1,3 @@
-# mue
+# Melbourne University Esports
+
+Website Development in progress...
