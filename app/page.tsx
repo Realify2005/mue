@@ -15,12 +15,12 @@ const Home: React.FC = () => {
         <MUExUMSU />
         <h2 className="text-4xl font-extrabold dark:text-white">Melbourne University Esports (MUE)</h2>
         <p className="text-base">The best of Unimelb spirit, now in e-sports</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Y_fLIxCPSaQ?si=W3tCGvYiruMbPej_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Y_fLIxCPSaQ?si=W3tCGvYiruMbPej_" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
       <div className="mt-12 px-80 flex flex-col justify-center items-center py-20 bg-cover bg-center bg-no-repeat bg-[url('../public/background/home_bg_1.jpg')]">
-        <h1 className="my-12 text-6xl font-extrabold text-white">Welcome to MUE's Official Website</h1>
-        <p className="my-6 text-base text-white">As Unimelb's official esports club, our very aim is to promote esports and develop students' talents in esports that they may have suppressed due to academic commitments. </p>
-        <p className="my-6 text-base text-white">On this website, you can check out all about UMESA - our upcoming events, focused games, sponsors' information and membership benefits, the committee, and even the history of UMESA's founding! Feel free to take your time to navigate round this site!</p>
+        <h1 className="my-12 text-6xl font-extrabold text-white">Welcome to MUE&apos;ss Official Website</h1>
+        <p className="my-6 text-base text-white">As Unimelb&apos;ss official esports club, our very aim is to promote esports and develop students&apos;s talents in esports that they may have suppressed due to academic commitments. </p>
+        <p className="my-6 text-base text-white">On this website, you can check out all about UMESA - our upcoming events, focused games, sponsors&apos;s information and membership benefits, the committee, and even the history of MUE&apos;ss founding! Feel free to take your time to navigate round this site!</p>
       </div>
       <div className="grid grid-cols-2 grid-flow-row">
         <div className="p-40 flex flex-col justify-center items-center bg-blue-600">
@@ -59,8 +59,8 @@ const Home: React.FC = () => {
         </div>
         <div className="p-40 flex flex-col justify-center items-center bg-gray-600">
           <h2 className="my-10 text-4xl font-extrabold text-white">Our Discord</h2>
-          <p className="my-6 text-base text-white">Seeking companions for your gaming adventures? Explore no further than our Discord server – a thriving hub within the Australian esports community. Find mates to queue ranked with, esports watch party, participate in your favorite games' customs and tournaments - all in one place.</p>
-          <iframe src="https://discord.com/widget?id=483256492762595328&theme=dark" width="500" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <p className="my-6 text-base text-white">Seeking companions for your gaming adventures? Explore no further than our Discord server – a thriving hub within the Australian esports community. Find mates to queue ranked with, esports watch party, participate in your favorite games&apos; customs and tournaments - all in one place.</p>
+          <iframe src="https://discord.com/widget?id=483256492762595328&theme=dark" width="500" height="500" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>
         <ContactUs />
         <div className="relative h-full">
