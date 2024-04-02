@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Header from './components/Header'
 import MUExUMSU from './components/MUExUMSU'
 import ContactUs from './components/home/ContactUs'
+import Footer from './components/Footer'
 
 const Home: React.FC = () => {
   return (
@@ -72,6 +73,7 @@ const Home: React.FC = () => {
           />
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

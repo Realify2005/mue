@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const SocialMediaIcons: React.FC = () => {
     return (
-        <div className="flex justify-between items-center gap-4">
+        <div className="flex justify-between items-center gap-6">
             <a href="https://www.facebook.com/MelbUniEsports/" target="_blank" rel="noopener noreferrer">
                 <Image
                     src="/logos/icons/facebook.png"
