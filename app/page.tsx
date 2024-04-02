@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import LandingSection from './components/LandingSection'
-import ContactUs from './components/home/ContactUs'
+import GetInTouch from './components/home/GetInTouch'
 import Footer from './components/Footer'
+import WelcometoMUE from './components/home/WelcometoMUE'
 
 const Home: React.FC = () => {
   return (
@@ -11,11 +12,7 @@ const Home: React.FC = () => {
       <div className="flex justify-center items-center">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Y_fLIxCPSaQ?si=W3tCGvYiruMbPej_" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
-      <div className="mt-12 px-80 flex flex-col justify-center items-center py-20 bg-cover bg-center bg-no-repeat bg-[url('../public/background/home_bg_1.jpg')]">
-        <h1 className="my-12 text-6xl font-extrabold text-white">Welcome to MUE&apos;s Official Website</h1>
-        <p className="my-6 text-base text-white">As Unimelb&apos;ss official esports club, our very aim is to promote esports and develop students&apos;s talents in esports that they may have suppressed due to academic commitments. </p>
-        <p className="my-6 text-base text-white">On this website, you can check out all about UMESA - our upcoming events, focused games, sponsors&apos;s information and membership benefits, the committee, and even the history of MUE&apos;ss founding! Feel free to take your time to navigate round this site!</p>
-      </div>
+      <WelcometoMUE />
       <div className="grid grid-cols-2 grid-flow-row">
         <div className="p-40 flex flex-col justify-center items-center bg-blue-600">
           <h2 className="my-10 text-4xl font-extrabold text-white">About MUE</h2>
@@ -56,7 +53,7 @@ const Home: React.FC = () => {
           <p className="my-6 text-base text-white">Seeking companions for your gaming adventures? Explore no further than our Discord server – a thriving hub within the Australian esports community. Find mates to queue ranked with, esports watch party, participate in your favorite games&apos; customs and tournaments - all in one place.</p>
           <iframe src="https://discord.com/widget?id=483256492762595328&theme=dark" width="500" height="500" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>
-        <ContactUs />
+        <GetInTouch />
         <div className="relative h-full">
           <Image 
             src="/photos/home_photo_4.jpg"

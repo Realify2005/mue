@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import SocialMediaIcons from '../SocialMediaIcons'
 
-const ContactForm: React.FC = () => {
+const GetInTouch: React.FC = () => {
     return (
         <div className="p-40 flex flex-col justify-center items-center bg-black text-white">
             <h2 className="my-12 text-4xl font-extrabold">Get In Touch</h2>
@@ -25,4 +25,4 @@ const ContactForm: React.FC = () => {
     );
 };
 
-export default ContactForm;
+export default GetInTouch;
