@@ -3,7 +3,7 @@ import React from 'react';
 const header: React.FC = () => {
   return (
     /* z-50 ensures header is always displayed in front of other elements */
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gray-200 rounded-lg overflow-hidden mx-auto inline-block border border-gray-400">
+    <div className="fixed z-50 bg-gray-200 rounded-lg overflow-hidden mx-auto inline-block border border-gray-400">
       <div className="flex justify-center p-2.5">
         <ul className="flex gap-4">
           <li className="transition-colors duration-300 ease-in-out">

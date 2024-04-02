@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const MUExUMSU: React.FC = () => {
     return (
-        <div className="flex justify-center align-center">
+        <div className="flex mt-6 justify-center align-center">
             <Image
                 src="/logos/UMSU.webp"
                 alt="UMSU logo"
