@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
-import Header from './components/header'
+import Header from './components/Header'
 import MUExUMSU from './components/MUExUMSU'
+import ContactUs from './components/home/ContactUs'
 
 const Home: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const Home: React.FC = () => {
       </div>
       <div className="grid grid-cols-2 grid-flow-row">
         <div className="p-40 flex flex-col justify-center items-center bg-blue-600">
-          <h2 className="my-10 text-4xl font-extrabold text-white">ABOUT MUE</h2>
+          <h2 className="my-10 text-4xl font-extrabold text-white">About MUE</h2>
           <p className="my-6 text-base text-white">Melbourne University Esports (MUE) is a club of the University of Melbourne, Australia, devoted to one of the fastest-growing interests in the world – E-sports! Simply put, we’re a club of gamers, by gamers, for gamers!</p>
           <p className="my-6 text-base text-white">MUE hosts a wide range of activities both on- and off-campus, whether it be tournaments, LAN parties, game-learning workshops or simply online sessions! Join scrawls of other E-sport gamers like you to party up in games! Build your sense of pride in the game that you have always known and loved!</p>
           <p className="my-6 text-base text-white">We focus on some of the most popular E-sport games, and each game will have its own community and range of activities. MUE celebrates the diversity within the wider gaming community and hopes that all new players, regardless of his/her language, will be welcomed and integrated into the Unimelb gaming community.</p>
@@ -59,6 +60,16 @@ const Home: React.FC = () => {
           <h2 className="my-10 text-4xl font-extrabold text-white">Our Discord</h2>
           <p className="my-6 text-base text-white">Seeking companions for your gaming adventures? Explore no further than our Discord server – a thriving hub within the Australian esports community. Find mates to queue ranked with, esports watch party, participate in your favorite games' customs and tournaments - all in one place.</p>
           <iframe src="https://discord.com/widget?id=483256492762595328&theme=dark" width="500" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+        <ContactUs />
+        <div className="relative h-full">
+          <Image 
+            src="/photos/home_photo_4.jpg"
+            alt="Picture of MUE stand inside of Trinity College Foundation Studies"
+            layout="fill"
+            objectFit="cover"
+            className="object-cover"
+          />
         </div>
       </div>
     </div>

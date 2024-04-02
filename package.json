@@ -6,13 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "email": "email dev"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
+    "@react-email/components": "0.0.16",
     "@supabase/supabase-js": "^2.41.1",
     "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-email": "2.1.1",
+    "resend": "^3.2.0"
   },
   "devDependencies": {
     "@types/node": "^20",

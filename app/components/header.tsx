@@ -1,6 +1,6 @@
 import React from 'react';
 
-const header: React.FC = () => {
+const Header: React.FC = () => {
   return (
     /* z-50 ensures header is always displayed in front of other elements */
     <div className="fixed z-50 bg-gray-200 rounded-lg overflow-hidden mx-auto inline-block border border-gray-400">
@@ -42,4 +42,4 @@ const header: React.FC = () => {
   );
 }
 
-export default header;
+export default Header;
