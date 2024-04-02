@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import SocialMediaIcons from '../SocialMediaIcons'
+
 const ContactForm: React.FC = () => {
     return (
         <div className="p-40 flex flex-col justify-center items-center bg-black text-white">
@@ -10,7 +12,7 @@ const ContactForm: React.FC = () => {
             <h6 className="my-4 text-2xl font-extrabold">For enquiries, please email us at</h6>
             <a href="mailto:melbuniesports@gmail.com" className="my-2 text-base text-white">melbuniesports@gmail.com</a>
             <h6 className="my-4 text-2xl font-extrabold">Alternatively, feel free to chat to us on</h6>
-            <a href="https://discord.gg/unimelb">
+            <a className="mb-24" href="https://discord.gg/unimelb" target="_blank" rel="noopener noreferrer">
                 <Image 
                     src="/logos/discord.png"
                     alt="Discord logo"
@@ -18,6 +20,7 @@ const ContactForm: React.FC = () => {
                     height={200}
                 />
             </a>
+            <SocialMediaIcons />
         </div>
     );
 };
