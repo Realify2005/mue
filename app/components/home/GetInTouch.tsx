@@ -4,8 +4,8 @@ import SocialMediaIcons from '../SocialMediaIcons'
 
 const GetInTouch: React.FC = () => {
     return (
-        <div className="grid grid-cols-2">
-            <div className="p-40 flex flex-col justify-center items-center bg-black text-white">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="p-10 md:p-40 flex flex-col justify-center items-center bg-black text-white">
                 <h2 className="my-12 text-4xl font-extrabold">Get In Touch</h2>
                 <h6 className="my-4 text-2xl font-extrabold">Address:</h6>
                 <p className="my-2 text-base text-white">Mailbox 122, First Floor Union House</p>
@@ -23,7 +23,7 @@ const GetInTouch: React.FC = () => {
                 </a>
                 <SocialMediaIcons />
             </div>
-            <div className="relative h-full">
+            <div className="relative h-screen md:h-full">
                 <Image 
                     src="/photos/home_photo_4.jpg"
                     alt="Picture of MUE stand inside of Trinity College Foundation Studies"
