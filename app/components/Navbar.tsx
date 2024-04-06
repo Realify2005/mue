@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import HomeDropdown from './HomeDropdown'
 import Image from 'next/image'
 
 const Navbar: React.FC = () => {
@@ -35,11 +36,9 @@ const Navbar: React.FC = () => {
             </button>
           </div>
           <div className="md:block hidden">
-            <ul className="flex gap-4">
+            <ul className="flex gap-4 items-center">
               <li className="transition-colors duration-300 ease-in-out">
-                <a href="#" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
-                  Home
-                </a>
+                <HomeDropdown />
               </li>
               <li className="transition-colors duration-300 ease-in-out">
                 <a href="#" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
@@ -63,7 +62,7 @@ const Navbar: React.FC = () => {
               </li>
               <li className="transition-colors duration-300 ease-in-out">
                 <a href="#" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
-                  Frequently Asked Questions
+                  Frequently Asked Questions  
                 </a>
               </li>
             </ul>
