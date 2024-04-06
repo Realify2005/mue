@@ -29,7 +29,7 @@ const GetInTouch: React.FC = () => {
                     alt="Picture of MUE stand inside of Trinity College Foundation Studies"
                     layout="fill"
                     objectFit="cover"
-                    className="object-cover"
+                    className="object-cover w-full"
                 />
             </div>
         </div>

@@ -16,10 +16,10 @@ const Navbar: React.FC = () => {
           <div className="flex">
             <span className="font-semibold text-xl">
               <Image               
-                  src="/logos/MUE.png"
+                  src="/logos/MUE_transparent.png"
                   alt="MUE logo"
-                  width={50}
-                  height={50}      
+                  width={60}
+                  height={60}      
               />
             </span>
           </div>

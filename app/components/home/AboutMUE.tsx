@@ -12,13 +12,13 @@ const AboutMUE: React.FC = () => {
             <button className="bg-white text-black font-bold py-2 px-4 hover:bg-gray-300 transition duration-300">Read More</button>
             </div>
             <div className="relative h-screen md:h-full">
-            <Image
-                src="/photos/home_photo_1.jpg"
-                alt="Picture of a group of people attending an in-person event hosted by MUE"
-                layout="fill"
-                objectFit="cover"
-                className="object-cover"
-            />
+                <Image
+                    src="/photos/home_photo_1.jpg"
+                    alt="Picture of a group of people attending an in-person event hosted by MUE"
+                    layout="fill"
+                    objectFit="cover"
+                    className="object-cover w-full"
+                />
             </div>
         </div>
     )
