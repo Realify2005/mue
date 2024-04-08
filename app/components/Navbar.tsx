@@ -1,28 +1,37 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import HomeDropdown from './HomeDropdown'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [aboutUsOpen, setAboutUsOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const toggleAboutUs = () => {
+    setAboutUsOpen(!aboutUsOpen);
+  };
+
 
   return (
     <div className="fixed top-0 w-screen bg-gray-200 border border-gray-400 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex">
-            <span className="font-semibold text-xl">
-              <Image               
-                  src="/logos/MUE_transparent.png"
-                  alt="MUE logo"
-                  width={60}
-                  height={60}      
-              />
-            </span>
+            <Link href="/">
+                <span className="font-semibold text-xl">
+                  <Image
+                    src="/logos/MUE_transparent.png"
+                    alt="MUE logo"
+                    width={60}
+                    height={60}
+                  />
+                </span>
+            </Link>
           </div>
           <div className="md:hidden flex">
             <button
@@ -75,7 +84,25 @@ const Navbar: React.FC = () => {
         <div className="md:hidden absolute top-16 w-full bg-gray-200">
           <ul className="px-2 py-1">
             <li>
-              <a href="#" className="block text-gray-900 hover:text-black">Home</a>
+              <a href="#" className="block text-gray-900 hover:text-black flex items-center" onClick={toggleAboutUs}>
+                About Us
+                <svg className={`w-2.5 h-2.5 ml-2.5 ${aboutUsOpen ? 'transform rotate-180' : ''}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
+                </svg>
+              </a>
+              {aboutUsOpen && (
+                <ul className="ml-4">
+                  <li>
+                    <a href="#" className="block text-gray-900 hover:text-black">Welcome Page</a>
+                  </li>
+                  <li>
+                    <a href="#" className="block text-gray-900 hover:text-black">Our Committee</a>
+                  </li>
+                  <li>
+                    <a href="#" className="block text-gray-900 hover:text-black">Our History</a>
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
               <a href="#" className="block text-gray-900 hover:text-black">Events</a>

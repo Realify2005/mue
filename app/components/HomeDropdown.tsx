@@ -13,14 +13,14 @@ const HomeDropdown = () => {
     };
 
     return (
-        <div className='w-full py-6 pb-8'>
-            <div className="relative inline-block">
+        <div className='w-full py-6' onBlur={closeDropdown}>
+            <div className="relative inline-block bg-blue-500 rounded-lg" tabIndex={0}>
                 <button
                     type="button"
-                    className="px-4 py-2 text-black font-medium rounded-lg text-sm inline-flex items-center"
+                    className="px-4 py-2 text-black font-medium hover:text-white hover:bg-black rounded-lg text-sm inline-flex items-center focus:outline-none"
                     onClick={toggleDropdown}
                 >
-                    Dropdown <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    About Us <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                     </svg>
                 </button>
@@ -31,28 +31,28 @@ const HomeDropdown = () => {
                             <li>
                                 <a
                                     href="#"
-                                    className="block px-4 py-2 text-black text-sm hover:bg-gray-100"
+                                    className="block px-4 py-2 text-black text-sm hover:bg-black hover:text-white"
                                     onClick={closeDropdown}
                                 >
-                                    Option 1
+                                    Welcome Page
                                 </a>
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    className="block px-4 py-2 text-black text-sm hover:bg-gray-100"
+                                    className="block px-4 py-2 text-black text-sm hover:bg-black hover:text-white"
                                     onClick={closeDropdown}
                                 >
-                                    Option 2
+                                    Our Committee
                                 </a>
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    className="block px-4 py-2 text-black text-sm hover:bg-gray-100"
+                                    className="block px-4 py-2 text-black text-sm hover:bg-black hover:text-white"
                                     onClick={closeDropdown}
                                 >
-                                    Option 3
+                                    Our History
                                 </a>
                             </li>
                         </ul>
