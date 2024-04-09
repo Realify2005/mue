@@ -1,5 +1,6 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import Link from 'next/link'
 
 const HomeDropdown = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const HomeDropdown = () => {
     };
 
     return (
-        <div className='w-full py-6' onBlur={closeDropdown}>
+        <div className='w-full py-6' onMouseLeave={closeDropdown}>
             <div className="relative inline-block bg-blue-500 rounded-lg" tabIndex={0}>
                 <button
                     type="button"
@@ -29,13 +30,13 @@ const HomeDropdown = () => {
                     <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <ul role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                             <li>
-                                <a
-                                    href="#"
+                                <Link
+                                    href="/"
                                     className="block px-4 py-2 text-black text-sm hover:bg-black hover:text-white"
                                     onClick={closeDropdown}
                                 >
                                     Welcome Page
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <a
@@ -47,13 +48,13 @@ const HomeDropdown = () => {
                                 </a>
                             </li>
                             <li>
-                                <a
-                                    href="#"
+                                <Link
+                                    href="/history" 
                                     className="block px-4 py-2 text-black text-sm hover:bg-black hover:text-white"
                                     onClick={closeDropdown}
                                 >
                                     Our History
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
