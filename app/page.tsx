@@ -9,7 +9,7 @@ import OurDiscord from './components/home/OurDiscord'
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <LandingSection />
       <WelcometoMUE />
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
         <GetInTouch />
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 
