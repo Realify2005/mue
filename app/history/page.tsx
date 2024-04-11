@@ -32,7 +32,7 @@ const HistoryPage: React.FC = () => {
             <Navbar />
               <div className="mt-12 px-5 pb-0 md:px-80 flex flex-col justify-center items-center py-20 bg-cover bg-center bg-no-repeat bg-[url('../public/background/history_bg_1.jpg')]">
                 <h2 className="m-16 text-3xl font-semibold text-white">The History of MUE</h2>
-                <div className="py-12 px-96 w-screen flex flex-col space-y-12 bg-gray-600">
+                <div className="py-12 px-8 md:px-96 w-screen flex flex-col space-y-12 bg-gray-600">
                   <ESportsinUnimelb />
                   <LanguageBarrier />
                   <TheAffiliation />

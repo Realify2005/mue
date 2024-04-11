@@ -13,24 +13,30 @@ const TheRebranding: React.FC = () => {
             </p>
             </span>
             <div className="flex justify-center items-center space-x-16">
-            <Image 
-                src="/logos/UMESA_transparent.png"
-                alt="UMESA logo"
-                width={275}
-                height={200}
-            />
-            <Image 
-                src="/logos/icons/right-arrow.png"
-                alt="Right Arrow Logo"
-                width={150}
-                height={150}
-            />
-            <Image 
-                src="/logos/MUE_transparent.png"
-                alt="MUE logo"
-                width={275}
-                height={200}
-            />
+            <div className="max-w-xs">
+                <Image 
+                    src="/logos/UMESA_transparent.png"
+                    alt="UMESA logo"
+                    width={275}
+                    height={200}
+                />
+            </div>
+            <div className="max-w-xs">
+                <Image 
+                    src="/logos/icons/right-arrow.png"
+                    alt="Right Arrow Logo"
+                    width={150}
+                    height={150}
+                />
+            </div>
+            <div className="max-w-xs">
+                <Image 
+                    src="/logos/MUE_transparent.png"
+                    alt="MUE logo"
+                    width={275}
+                    height={200}
+                />
+            </div>
             </div>
         </div>
     )
