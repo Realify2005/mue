@@ -5,10 +5,10 @@ const TheRebranding: React.FC = () => {
     return(
         <div className="flex flex-col space-y-12 justify-center items-left">
             <span>
-            <h6 className="text-1xl font-semibold text-white">
+            <h6 className="text-3xl font-semibold text-white mb-4">
                 The Rebranding
             </h6>
-            <p className="text-white font-light">
+            <p className="text-white font-light leading-relaxed">
                 Around the end of 2023, the committee has decided to rebrand the club&apos;s name. University of Melbourne Esports Association (UMESA) has been rebranded into Melbourne University Esports (MUE). We also came up a brand new logo as part of rebranding.
             </p>
             </span>
