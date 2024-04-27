@@ -55,9 +55,9 @@ const Navbar: React.FC = () => {
                 </a>
               </li>
               <li className="transition-colors duration-300 ease-in-out">
-                <a href="#" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
+                <Link href="/games" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
                   Focused Games
-                </a>
+                </Link>
               </li>
               <li className="transition-colors duration-300 ease-in-out">
                 <a href="#" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
