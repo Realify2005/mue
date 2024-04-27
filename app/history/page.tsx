@@ -17,13 +17,11 @@ export const metadata = {
       siteName: 'Melbourne University Esports',
       locale: 'en_AU',
       type: 'website',
-      image: 'opengraph-image.png',
     },
     twitter: {
       card: 'summary_large_image',
       title: "Our History | MUE",
       description: 'Discover the history of how MUE has come along thus far',
-      image: 'opengraph-image.png',
     },
 }
 
