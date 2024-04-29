@@ -33,8 +33,8 @@ const GamesPage: React.FC = () => {
                 </h6>
               </div>
               <div className="py-12 px-8 md:px-24 w-screen flex flex-col justify-center items-center bg-black">
-                  <h3 className="text-4xl font-semibold text-white">Casual</h3>
-                  <div className="grid grid-cols-3 gap-40 justify-center items-center">
+                  <h3 className="mb-20 md:mb-0 text-4xl font-semibold text-white">Casual</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-32 md:gap-40 justify-center items-center">
                     <Image
                       src="/logos/games/minecraft.png"
                       alt="minecraft logo"
@@ -78,8 +78,8 @@ const GamesPage: React.FC = () => {
                       height={275}
                     />
                   </div>
-                  <h3 className="my-20 text-4xl font-semibold text-white">Competitive</h3>
-                  <div className="grid grid-cols-3 gap-40">
+                  <h3 className="my-24 md:my-20 text-4xl font-semibold text-white">Competitive</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-32 md:gap-40">
                     <Image
                       src="/logos/games/valorant.png"
                       alt="valorant logo"
