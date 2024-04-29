@@ -31,8 +31,17 @@ const GamesPage: React.FC = () => {
                   when we see a growing demand and popularity in other games, we&apos;ll add them to this list!
                 </h6>
               </div>
-              <div className="py-12 px-8 md:px-96 w-screen flex flex-col justify-center items-center space-y-12 bg-black">
-                  <h3 className="text-4xl font-semibold text-white">PC Games</h3>
+              <div className="py-12 px-8 md:px-24 w-screen flex flex-col justify-center items-center space-y-12 bg-black">
+                  <h3 className="text-4xl font-semibold text-white">Casual</h3>
+                  <h3 className="text-4xl font-semibold text-white">Competitive</h3>
+                  <div className="grid grid-cols-3 gap-4">
+
+                  </div>
+                  <p className="text-white font-light leading-relaxed">
+                    * MUE boasts its own roster of competitive teams actively participating in a range of inter-university tournaments across multiple gaming titles. 
+                    While these games are predominantly played at a competitive level, we embrace gamers of all backgrounds, including those who prefer a more casual gaming experience. 
+                    Don&apos;t hesitate to join our Discord server, where you can connect with fellow gamers, find teammates, and dive into the gaming world, regardless of your skill level or playstyle!
+                  </p>
               </div>
             <Footer />
         </>
