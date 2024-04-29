@@ -17,7 +17,7 @@ const LanguageBarrier: React.FC = () => {
                 On the 31st of October in the same year, the four executives of the club received an email from UMSU. UMESA has been officially affiliated. 
             </span>
             <span className="text-white font-light leading-relaxed">
-                Two worlds, divided by language, united by a common purpose, strengthened by diversity. This is UMESA - a club uniting gamers from all around the world, on a mission to promote the best of the Unimelb spirit in e-sports.\
+                Two worlds, divided by language, united by a common purpose, strengthened by diversity. This is UMESA - a club uniting gamers from all around the world, on a mission to promote the best of the Unimelb spirit in e-sports.
             </span>
         </div>
     )

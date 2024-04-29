@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
               <a href="#" className="block text-gray-900 hover:text-black">Events</a>
             </li>
             <li>
-              <a href="#" className="block text-gray-900 hover:text-black">Focused Games</a>
+              <Link href="/games" className="block text-gray-900 hover:text-black">Focused Games</Link>
             </li>
             <li>
               <a href="#" className="block text-gray-900 hover:text-black">Membership</a>
