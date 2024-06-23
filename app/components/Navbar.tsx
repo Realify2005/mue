@@ -65,9 +65,9 @@ const Navbar: React.FC = () => {
                 </a>
               </li>
               <li className="transition-colors duration-300 ease-in-out">
-                <a href="#" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
+                <Link href="/sponsors" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
                   Our Sponsors
-                </a>
+                </Link>
               </li>
               <li className="transition-colors duration-300 ease-in-out">
                 <a href="#" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
               <a href="#" className="block text-gray-900 hover:text-black">Membership</a>
             </li>
             <li>
-              <a href="#" className="block text-gray-900 hover:text-black">Our Sponsors</a>
+              <Link href="/sponsors" className="block text-gray-900 hover:text-black">Our Sponsors</Link>
             </li>
             <li>
               <a href="#" className="block text-gray-900 hover:text-black">FAQs</a>
