@@ -9,10 +9,10 @@ import TheRebranding from '../components/history/TheRebranding'
 
 export const metadata = {
     title: 'Our History | MUE',
-    description: 'Discover the history of how MUE has come along thus far',
+    description: 'Discover the history of how MUE has come along thus far.',
     openGraph: {
       title: 'Our History | MUE',
-      description: 'Discover the history of how MUE has come along thus far',
+      description: 'Discover the history of how MUE has come along thus far.',
       url: '/history',
       siteName: 'Melbourne University Esports',
       locale: 'en_AU',
@@ -21,7 +21,7 @@ export const metadata = {
     twitter: {
       card: 'summary_large_image',
       title: "Our History | MUE",
-      description: 'Discover the history of how MUE has come along thus far',
+      description: 'Discover the history of how MUE has come along thus far.',
     },
 }
 
