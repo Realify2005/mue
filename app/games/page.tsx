@@ -32,7 +32,7 @@ const GamesPage: React.FC = () => {
                 <h6 className="mb-20 text-1xl font-semibold text-white">
                   MUE focuses on these games when planning events and activities, and the list includes both PC and mobile games. 
                   This list is not exhaustive, however - when we see a growing demand and popularity in other games, 
-                  we&apos;ll add them to this list! Other games not on this list can also be found in <a className="bg-purple-600" href="https://discord.gg/unimelb">our discord</a> under misc-games.
+                  we&apos;ll add them to this list! Other games not on this list can also be found in <a className="text-blue-300 underline hover:text-blue-500" href="https://discord.gg/unimelb">our discord</a> under misc-games.
                 </h6>
               </div>
               <div className="py-12 px-8 md:px-24 w-screen flex flex-col justify-center items-center bg-black">
