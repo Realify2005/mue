@@ -60,9 +60,9 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li className="transition-colors duration-300 ease-in-out">
-                <a href="#" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
+                <Link href="/membership" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
                   Membership
-                </a>
+                </Link>
               </li>
               <li className="transition-colors duration-300 ease-in-out">
                 <Link href="/sponsors" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
               {aboutUsOpen && (
                 <ul className="ml-4">
                   <li>
-                    <a href="#" className="block text-gray-900 hover:text-black">Welcome Page</a>
+                    <Link href="/" className="block text-gray-900 hover:text-black">Welcome Page</Link>
                   </li>
                   <li>
                     <a href="#" className="block text-gray-900 hover:text-black">Our Committee</a>
@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
               <Link href="/games" className="block text-gray-900 hover:text-black">Focused Games</Link>
             </li>
             <li>
-              <a href="#" className="block text-gray-900 hover:text-black">Membership</a>
+              <Link href="/membership" className="block text-gray-900 hover:text-black">Membership</Link>
             </li>
             <li>
               <Link href="/sponsors" className="block text-gray-900 hover:text-black">Our Sponsors</Link>

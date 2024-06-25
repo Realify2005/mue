@@ -28,7 +28,7 @@ const GamesPage: React.FC = () => {
         <>
             <Navbar />
               <div className="mt-12 px-5 pb-0 md:px-80 flex flex-col justify-center items-center py-20 bg-cover bg-bottom bg-no-repeat bg-[url('../public/background/games_bg_1.jpg')]">
-                <h4 className="m-12 text-3xl font-semibold text-white">Focused Games</h4>
+                <h4 className="my-12 text-3xl font-semibold text-white">Focused Games</h4>
                 <h6 className="mb-20 text-1xl font-semibold text-white">
                   MUE focuses on these games when planning events and activities, and the list includes both PC and mobile games. 
                   This list is not exhaustive, however - when we see a growing demand and popularity in other games, 
