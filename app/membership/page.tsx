@@ -94,7 +94,7 @@ const MembershipsPage: React.FC = () => {
     return (
       <>
       <Navbar />
-      <div className="mt-4 px-5 pb-0 md:px-80 flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat py-20 bg-[url('../public/background/membership_bg_1.jpeg')]">
+      <div className="mt-4 px-5 pb-0 md:px-80 flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat py-20 bg-[url('../public/background/membership_bg_1.jpg')]">
         <h4 className="my-12 text-3xl font-semibold text-white">Membership</h4>
         <h5 className="mb-20 text-2xl font-semibold text-white">Your rank does not matter</h5>
       </div>
