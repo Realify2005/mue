@@ -9,7 +9,7 @@ const tiers = [
     id: 'tier-unimelb',
     href: membershipLink,
     priceMonthly: '$10',
-    description: "For current unimelb students.",
+    description: "For current unimelb students",
     features: [
       'Free entrance to most of our events and workshops (Free food & drinks)',
       'Heavily discounted paid events',
