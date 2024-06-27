@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Image from 'next/image'
+import { fetchNotionDatabase } from '../components/api/events';
 
 const faqs = [
   {
@@ -48,7 +49,10 @@ export const metadata = {
     },
 }
 
-const FAQPage: React.FC = () => {
+const FAQPage: React.FC = async () => {
+    const data = await fetchNotionDatabase();
+    console.log(data);
+    
     return (
       <>
       <Navbar />
