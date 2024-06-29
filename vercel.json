@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/.*",
+        "headers": {
+          "Cache-Control": "no-store"
+        }
+      },
+      {
+        "src": "/(.*)",
+        "headers": {
+          "Cache-Control": "s-maxage=1, stale-while-revalidate"
+        }
+      }
+    ]
+  }
+  

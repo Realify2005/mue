@@ -18,10 +18,12 @@ interface EventCardProps {
 }
 
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
-  const formattedDate = new Date(event.date).toLocaleDateString('en-GB', {
+  const formattedDate = new Date(event.date).toLocaleString('en-GB', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
   });
 
   const tagColors: { [key: string]: string } = {
