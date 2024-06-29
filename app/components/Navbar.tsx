@@ -50,9 +50,9 @@ const Navbar: React.FC = () => {
                 <HomeDropdown />
               </li>
               <li className="transition-colors duration-300 ease-in-out">
-                <a href="#" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
+                <Link href="/events" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
                   Events
-                </a>
+                </Link>
               </li>
               <li className="transition-colors duration-300 ease-in-out">
                 <Link href="/games" className="text-black hover:text-white hover:bg-black px-2 py-1 rounded">
@@ -105,7 +105,7 @@ const Navbar: React.FC = () => {
               )}
             </li>
             <li>
-              <a href="#" className="block text-gray-900 hover:text-black">Events</a>
+              <Link href="/events" className="block text-gray-900 hover:text-black">Events</Link>
             </li>
             <li>
               <Link href="/games" className="block text-gray-900 hover:text-black">Focused Games</Link>
