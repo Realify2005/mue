@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { fetchNotionDatabase } from '../components/api/events';
+import { fetchNotionDatabase } from '../components/api/fetchNotionDatabase';
 import EventCard from '../components/events/EventCard';
 
 export const metadata = {
@@ -22,10 +22,11 @@ export const metadata = {
   },
 };
 
+export const revalidate = 0;
+
 const EventsPage: React.FC = async () => {
   const data = await fetchNotionDatabase();
   const now = new Date();
-  console.log(data);
   const upcomingEvents = data.filter(event => new Date(event.date) >= now);
   const pastEvents = data.filter(event => new Date(event.date) < now);
 
