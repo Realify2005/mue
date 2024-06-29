@@ -22,3 +22,5 @@ export async function fetchNotionDatabase() {
 
   return indexedData;
 }
+
+export const revalidate = 0;
