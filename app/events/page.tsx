@@ -33,7 +33,15 @@ const EventsPage: React.FC = async () => {
   return (
     <>
       <Navbar />
-      <div className="mt-4 px-5 pb-0 md:px-80 flex flex-col justify-center items-center py-20 bg-gray-100">
+      <div className="mt-12 px-5 py-8 md:px-80 flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('../public/background/events_bg_4.jpg')]">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="my-12 text-3xl font-semibold text-white bg-black inline-block">Events</h2>
+          <p className="mb-12 text-1xl font-semibold text-white bg-black">
+            Browse through our exciting list of events. Lots of fun here!
+          </p>
+        </div>
+      </div>
+      <div className="px-5 pb-5 md:px-80 flex flex-col justify-center items-center py-20 bg-gradient-to-r from-indigo-100 from-10% via-sky-100 via-30% to-emerald-100 to-90%">
         <h1 className="text-4xl font-bold mb-8">Upcoming Events</h1>
           {upcomingEvents.length > 0 ? (
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

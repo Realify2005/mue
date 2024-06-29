@@ -52,7 +52,7 @@ const FAQPage: React.FC = () => {
     return (
       <>
       <Navbar />
-        <div className="mt-4 px-5 pb-0 md:px-80 flex flex-col justify-center items-center py-20 bg-cover bg-bottom bg-no-repeat bg-[url('../public/background/faq_bg_1.jpg')]">
+        <div className="mt-4 px-5 pb-0 md:px-80 flex flex-col justify-center items-center py-20 bg-cover bg-center bg-no-repeat bg-[url('../public/background/faq_bg_1.jpg')]">
           <h4 className="my-16 text-3xl font-semibold text-center text-white">Frequently Asked Questions</h4>
           <div className="bg-white w-screen flex flex-col justify-center items-center">
             <div className="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-8 sm:py-12 lg:px-8 lg:py-16">

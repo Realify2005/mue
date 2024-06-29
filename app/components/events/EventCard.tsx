@@ -24,6 +24,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
     year: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
+    hour12: true
   });
 
   const tagColors: { [key: string]: string } = {
@@ -53,7 +54,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
           </span>
         ))}
       </div>
-      <h2 className="text-xl font-bold mt-2">{event.name}</h2>
+      <h2 className="text-xl font-bold overflow-clip mt-2">{event.name}</h2>
       <p className="text-gray-600">{formattedDate}</p>
       <p className="font-semibold mt-1">
         <span className="text-gray-700">Duration: </span>{event.duration}
@@ -71,7 +72,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
           rel="noopener noreferrer"
           className="text-blue-500 mt-2 block"
         >
-          Instagram Link
+          Instagram Post
         </a>
       )}
     </div>
