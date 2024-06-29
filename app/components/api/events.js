@@ -1,12 +1,11 @@
-export const fetchCache = 'force-no-store';
-
-const { Client } = require('@notionhq/client');
+import { Client } from '@notionhq/client';
 
 const notion = new Client({ auth: process.env.NOTION_API_TOKEN });
 
-export async function fetchNotionDatabase() {
+export default async function handler(req, res) {
+  const timestamp = Date.now();
   const databaseId = process.env.NOTION_DATABASE_ID;
-  const response = await notion.databases.query({ database_id: databaseId });
+  const response = await notion.databases.query({ database_id: databaseId, timestamp });
 
   const indexedData = response.results
     .filter(page => page.properties.Finalised.checkbox)
@@ -15,12 +14,12 @@ export async function fetchNotionDatabase() {
       tags: page.properties.Tags.multi_select.map(tag => tag.name),
       location: page.properties.Location.rich_text[0].plain_text,
       finalised: page.properties.Finalised.checkbox,
-      date: page.properties.Start.date.start,
+      date: page.properties.Date.date.start,
       posterUrl: page.properties.Poster.files[0].file.url,
-      duration: page.properties.Duration.formula.string,
+      duration: page.properties.Duration.rich_text[0].plain_text,
       name: page.properties.Name.title[0]?.plain_text,
       instagramLink: page.properties['Instagram Link'].url
     }));
 
-  return indexedData;
+  res.status(200).json(indexedData);
 }
