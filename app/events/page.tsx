@@ -4,8 +4,6 @@ import Footer from '../components/Footer';
 import { fetchNotionDatabase } from '../components/api/events';
 import EventCard from '../components/events/EventCard';
 
-export const fetchCache = 'force-no-store'
-
 export const metadata = {
   title: 'Events | MUE',
   description: 'Check out MUE\'s upcoming and past events!',

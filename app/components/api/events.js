@@ -2,6 +2,8 @@ const { Client } = require('@notionhq/client');
 
 const notion = new Client({ auth: process.env.NOTION_API_TOKEN });
 
+export const fetchCache = 'force-no-store';
+
 export async function fetchNotionDatabase() {
   const databaseId = process.env.NOTION_DATABASE_ID;
   const response = await notion.databases.query({ database_id: databaseId });
@@ -22,5 +24,3 @@ export async function fetchNotionDatabase() {
 
   return indexedData;
 }
-
-export const revalidate = 0;
