@@ -3,15 +3,21 @@
     "routes": [
       {
         "src": "/api/.*",
-        "headers": {
-          "Cache-Control": "no-store"
-        }
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-store"
+          }
+        ]
       },
       {
         "src": "/(.*)",
-        "headers": {
-          "Cache-Control": "s-maxage=1, stale-while-revalidate"
-        }
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
       }
     ]
   }
