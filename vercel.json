@@ -1,8 +1,8 @@
 {
     "version": 2,
-    "routes": [
+    "headers": [
       {
-        "src": "/api/.*",
+        "source": "/api/(.*)",
         "headers": [
           {
             "key": "Cache-Control",
@@ -11,7 +11,7 @@
         ]
       },
       {
-        "src": "/(.*)",
+        "source": "/(.*)",
         "headers": [
           {
             "key": "Cache-Control",
