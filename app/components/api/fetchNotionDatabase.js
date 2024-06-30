@@ -3,9 +3,8 @@ const { Client } = require('@notionhq/client');
 const notion = new Client({ auth: process.env.NOTION_API_TOKEN });
 
 export async function fetchNotionDatabase() {
-  const timestamp = Date.now();
   const databaseId = process.env.NOTION_DATABASE_ID;
-  const response = await notion.databases.query({ database_id: databaseId, timestamp });
+  const response = await notion.databases.query({ database_id: databaseId});
 
   const indexedData = response.results
     .filter(page => page.properties.Finalised.checkbox)
