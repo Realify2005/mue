@@ -39,13 +39,13 @@ const HomeDropdown = () => {
                                 </Link>
                             </li>
                             <li>
-                                <a
-                                    href="#"
+                                <Link
+                                    href="/committee"
                                     className="block px-4 py-2 text-black text-sm hover:bg-black hover:text-white"
                                     onClick={closeDropdown}
                                 >
                                     Our Committee
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <Link

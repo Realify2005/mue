@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import CasualGames from '../components/games/Casual'
 import CompetitiveGames from '../components/games/Competitive'
-import Image from 'next/image'
 
 export const metadata = {
     title: 'Focused Games | MUE',
