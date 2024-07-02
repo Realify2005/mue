@@ -2,4 +2,4 @@
 
 Website development in progress...
 
-Check it out live on https://mue-rust.vercel.app
+Check it out live on https://muesports.club/
