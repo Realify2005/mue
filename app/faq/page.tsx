@@ -2,33 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Image from 'next/image'
-
-const faqs = [
-  {
-    id: 1,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 2,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 3,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 4,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-]
+import { faqs } from '../components/faq/faqs'
 
 export const metadata = {
     title: 'Frequently Asked Questions | MUE',
@@ -77,7 +51,7 @@ const FAQPage: React.FC = () => {
             <p className="my-6 max-w-2xl text-base text-center leading-7">
                 For quicker response time, please join our discord and chat with our committee team.
             </p>
-            <a className="mb-12" href="https://discord.gg/unimelb" target="_blank" rel="noopener noreferrer">
+            <a className="mb-12" href={process.env.MUE_DISCORD_PERMALINK} target="_blank" rel="noopener noreferrer">
                 <Image 
                     src="/logos/discord.png"
                     alt="Discord logo"

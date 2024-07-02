@@ -12,7 +12,7 @@ const SocialMediaIcons: React.FC = () => {
                     height={50}
                 />
             </a>
-            <a href="https://discord.gg/unimelb" target="_blank" rel="noopener noreferrer">
+            <a href={process.env.MUE_DISCORD_PERMALINK} target="_blank" rel="noopener noreferrer">
                 <Image
                     src="/logos/icons/discord.png"
                     alt="discord icon"

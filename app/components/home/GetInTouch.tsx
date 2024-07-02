@@ -13,7 +13,7 @@ const GetInTouch: React.FC = () => {
                 <h6 className="my-4 text-2xl font-extrabold">For enquiries, please email us at</h6>
                 <a href="mailto:melbuniesports@gmail.com" className="my-2 text-base text-white">melbuniesports@gmail.com</a>
                 <h6 className="my-4 text-2xl font-extrabold">Alternatively, feel free to chat to us on</h6>
-                <a className="mb-24" href="https://discord.gg/unimelb" target="_blank" rel="noopener noreferrer">
+                <a className="mb-24" href={process.env.MUE_DISCORD_PERMALINK} target="_blank" rel="noopener noreferrer">
                     <Image 
                         src="/logos/discord.png"
                         alt="Discord logo"
