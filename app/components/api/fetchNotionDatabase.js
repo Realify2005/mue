@@ -17,7 +17,7 @@ export async function fetchNotionDatabase() {
       posterUrl: page.properties.Poster.files[0].file.url,
       duration: page.properties.Duration.formula.string,
       name: page.properties.Name.title[0]?.plain_text,
-      instagramLink: page.properties['Instagram Link'].url
+      externalLink: page.properties['External Link'].url
     }));
 
   return indexedData;

@@ -10,7 +10,7 @@ interface Event {
   posterUrl: string;
   duration: string;
   name: string;
-  instagramLink?: string;
+  externalLink?: string;
 }
 
 interface EventCardProps {
@@ -19,6 +19,7 @@ interface EventCardProps {
 
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const formattedDate = new Date(event.date).toLocaleString('en-GB', {
+    timeZone: 'Australia/Sydney',
     day: 'numeric',
     month: 'long',
     year: 'numeric',
@@ -65,14 +66,14 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
       <p className="font-semibold mt-1">
         <span className="text-gray-700">Sponsored by: </span>{event.affiliatedThirdParties}
       </p>
-      {event.instagramLink && (
+      {event.externalLink && (
         <a
-          href={event.instagramLink}
+          href={event.externalLink}
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-500 mt-2 block"
         >
-          Instagram Post
+          More Information
         </a>
       )}
     </div>
