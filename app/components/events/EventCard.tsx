@@ -29,10 +29,12 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
   });
 
   const tagColors: { [key: string]: string } = {
-    "📅 Weeklies": 'bg-blue-200',
-    "🏆 Tournament": 'bg-orange-200',
+    "📅 Weeklies": 'bg-pink-200',
+    "🏆 Tournament": 'bg-yellow-200',
     "🌏 Collab": 'bg-purple-200',
     "📚 Trivia": 'bg-green-200',
+    "❄️ Winterfest": "bg-blue-200",
+    "✨ Special": "bg-orange-200"
     // add more tag-to-color mappings as needed
   };
 
