@@ -34,7 +34,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
     "🌏 Collab": 'bg-purple-200',
     "📚 Trivia": 'bg-green-200',
     "❄️ Winterfest": "bg-blue-200",
-    "✨ Special": "bg-orange-200"
+    "✨ Special": "bg-orange-100"
     // add more tag-to-color mappings as needed
   };
 

@@ -20,7 +20,5 @@ export async function fetchNotionDatabase() {
       externalLink: page.properties['External Link'].url
     }));
 
-  console.log(indexedData)
-
   return indexedData;
 }
