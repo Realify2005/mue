@@ -31,6 +31,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: baseURL + '/membership',
+      lastModified: serverUpdatedAt,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: baseURL + '/faq',
+      lastModified: serverUpdatedAt,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: baseURL + '/games',
+      lastModified: serverUpdatedAt,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: baseURL + '/events',
       lastModified: notionEventsUpdatedAt,
       changeFrequency: 'daily',
