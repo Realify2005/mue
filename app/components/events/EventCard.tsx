@@ -75,7 +75,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
           rel="noopener noreferrer"
           className="text-blue-500 mt-2 block"
         >
-          More Information
+          More Information --&gt;
         </a>
       )}
     </div>
