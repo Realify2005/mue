@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Head from 'next/head'
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 
@@ -33,6 +34,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <title>MUE | Melbourne University Esports</title>
+        <meta name="description" content="Your home of Esports and Gaming at Unimelb!" />
+        <link rel="canonical" href={`${baseURL}/`} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "MUE | Melbourne University Esports",
+            "description": "Your home of Esports and Gaming at Unimelb!"
+          })}
+        </script>
+      </Head>
       <body className={inter.className}>
         {children}
         <Analytics/>
