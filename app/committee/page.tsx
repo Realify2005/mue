@@ -22,8 +22,7 @@ export const metadata = {
 
 export const revalidate = 0;
 
-const EventsPage: React.FC = async () => {
-
+const CommitteePage: React.FC = async () => {
   return (
     <>
       <Navbar />
@@ -38,4 +37,4 @@ const EventsPage: React.FC = async () => {
   );
 };
 
-export default EventsPage;
+export default CommitteePage;
