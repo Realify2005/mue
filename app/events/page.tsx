@@ -27,8 +27,11 @@ export const revalidate = 0;
 const EventsPage: React.FC = async () => {
   const data = await fetchNotionDatabase();
   const now = new Date();
+  const past30Days = new Date();
+  past30Days.setDate(now.getDate() - 30);
+
   const upcomingEvents = data.filter(event => new Date(event.date) >= now);
-  const pastEvents = data.filter(event => new Date(event.date) < now);
+  const pastEvents = data.filter(event => new Date(event.date) < now && new Date(event.date) >= past30Days);
 
   return (
     <>
@@ -46,21 +49,24 @@ const EventsPage: React.FC = async () => {
           Note: All times shown are in <span className="font-bold text-black">AEST</span>.
         </p>
         <h1 className="text-4xl font-bold mb-8">Upcoming Events</h1>
-          {upcomingEvents.length > 0 ? (
-            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              {upcomingEvents.map(event => <EventCard key={event.name} event={event} />)}
-            </div>
-          ) : (
-            <p>No upcoming events</p>
-          )}
+        {upcomingEvents.length > 0 ? (
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {upcomingEvents.map(event => <EventCard key={event.name} event={event} />)}
+          </div>
+        ) : (
+          <p>No upcoming events :(</p>
+        )}
         <h1 className="text-4xl font-bold mt-12 mb-8">Past Events</h1>
-          {pastEvents.length > 0 ? (
-            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              {pastEvents.map(event => <EventCard key={event.name} event={event} />)}
-            </div>
-          ) : (
-            <p>No past events</p>
-          )}
+        {pastEvents.length > 0 ? (
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {pastEvents.map(event => <EventCard key={event.name} event={event} />)}
+          </div>
+        ) : (
+          <p>No past events in the last 30 days</p>
+        )}
+        <p className="text-sm text-gray-500 my-4">
+          Note: Only events held in the past <span className="font-bold text-black">30 days</span> are shown.
+        </p>
       </div>
       <Footer />
     </>
