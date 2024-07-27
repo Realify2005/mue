@@ -8,17 +8,24 @@ export async function fetchNotionDatabase() {
 
   const indexedData = response.results
     .filter(page => page.properties.Finalised.checkbox)
-    .map(page => ({
-      affiliatedThirdParties: page.properties['Affiliated Third Parties'].rich_text[0].plain_text,
-      tags: page.properties.Tags.multi_select.map(tag => tag.name),
-      location: page.properties.Location.rich_text[0].plain_text,
-      finalised: page.properties.Finalised.checkbox,
-      date: page.properties.Start.date.start,
-      posterUrl: page.properties.Poster.files[0].file.url,
-      duration: page.properties.Duration.formula.string,
-      name: page.properties.Name.title[0]?.plain_text,
-      externalLink: page.properties['External Link'].url
-    }));
+    .map(page => {
+      const affiliatedThirdPartiesRichText = page.properties['Affiliated Third Parties'].rich_text;
+      const affiliatedThirdParties = affiliatedThirdPartiesRichText.length > 0 
+        ? affiliatedThirdPartiesRichText[0].plain_text || "none"
+        : "none";
+
+      return {
+        affiliatedThirdParties,
+        tags: page.properties.Tags.multi_select.map(tag => tag.name),
+        location: page.properties.Location.rich_text[0].plain_text,
+        finalised: page.properties.Finalised.checkbox,
+        date: page.properties.Start.date.start,
+        posterUrl: page.properties.Poster.files[0].file.url,
+        duration: page.properties.Duration.formula.string,
+        name: page.properties.Name.title[0]?.plain_text,
+        externalLink: page.properties['External Link'].url
+      };
+    });
 
   return indexedData;
 }

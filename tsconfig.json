@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/api/fetchNotionDatabase.js", "app/components/api/fetchNotionDatabase.js", "app/components/events/EventsCard.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/api/fetchNotionDatabase.js", "app/components/api/fetchNotionDatabase.js", "app/components/events/EventsCard.jsx", "app/pages/_document.jsx"],
   "exclude": ["node_modules"]
 }

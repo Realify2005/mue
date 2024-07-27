@@ -65,9 +65,11 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
       <p className="font-semibold mt-1">
         <span className="text-gray-700">Location: </span>{event.location}
       </p>
-      <p className="font-semibold mt-1">
-        <span className="text-gray-700">Sponsored by: </span>{event.affiliatedThirdParties}
-      </p>
+      {event.affiliatedThirdParties !== "none" && (
+        <p className="font-semibold mt-1">
+          <span className="text-gray-700">Sponsored by: </span>{event.affiliatedThirdParties}
+        </p>
+      )}
       {event.externalLink && (
         <a
           href={event.externalLink}
