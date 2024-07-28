@@ -46,6 +46,12 @@ const CasualGames: React.FC = () => {
           width={275}
           height={275}
         />
+        <Image
+          src="/logos/games/osu.png"
+          alt="osu logo"
+          width={275}
+          height={275}
+        />
       </div>
     )
 }
