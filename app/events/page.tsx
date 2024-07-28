@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { fetchNotionDatabase } from '../components/api/fetchNotionDatabase';
+import { fetchMostRecentEventsNotionUpdate, mostRecentEventsNotionUpdate } from '../components/api/fetchMostRecentEventsNotionUpdate';
 import EventCard from '../components/events/EventCard';
 
 export const metadata = {
@@ -30,6 +31,17 @@ const EventsPage: React.FC = async () => {
   const past30Days = new Date();
   past30Days.setDate(now.getDate() - 30);
 
+  const mostRecentUpdate = await fetchMostRecentEventsNotionUpdate();
+  const lastUpdatedAt = new Date(mostRecentUpdate).toLocaleString('en-GB', {
+    timeZone: 'Australia/Sydney',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true
+  });
+
   const upcomingEvents = data.filter(event => new Date(event.date) >= now);
   const pastEvents = data.filter(event => new Date(event.date) < now && new Date(event.date) >= past30Days);
 
@@ -46,7 +58,10 @@ const EventsPage: React.FC = async () => {
       </div>
       <div className="px-5 pb-5 md:px-80 flex flex-col justify-center items-center py-20 bg-gradient-to-r from-indigo-100 from-10% via-sky-100 via-30% to-emerald-100 to-90%">
         <p className="text-sm text-gray-500 mb-4">
-          Note: All times shown are in <span className="font-bold text-black">AEST</span>.
+          All times shown are in <span className="font-bold text-black">AEST</span>.
+        </p>
+        <p className="text-sm text-gray-500 mb-4">
+          Last updated at {lastUpdatedAt}. 
         </p>
         <h1 className="text-4xl font-bold mb-8">Upcoming Events</h1>
         {upcomingEvents.length > 0 ? (
@@ -65,7 +80,7 @@ const EventsPage: React.FC = async () => {
           <p>No past events in the last 30 days</p>
         )}
         <p className="text-sm text-gray-500 my-4">
-          Note: Only events held in the past <span className="font-bold text-black">30 days</span> are shown.
+          Only events held in the past <span className="font-bold text-black">30 days</span> are shown. 
         </p>
       </div>
       <Footer />

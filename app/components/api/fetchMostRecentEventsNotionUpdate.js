@@ -16,5 +16,5 @@ export async function fetchMostRecentEventsNotionUpdate() {
   });
 
   const mostRecentPage = response.results[0];
-  return mostRecentPage ? mostRecentPage.last_edited_time : null;
+  return mostRecentPage.last_edited_time;
 }
