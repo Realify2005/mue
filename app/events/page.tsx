@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { fetchNotionDatabase } from '../components/api/fetchNotionDatabase';
-import { fetchMostRecentEventsNotionUpdate, mostRecentEventsNotionUpdate } from '../components/api/fetchMostRecentEventsNotionUpdate';
+import { fetchMostRecentEventsNotionUpdate} from '../components/api/fetchMostRecentEventsNotionUpdate';
 import EventCard from '../components/events/EventCard';
 
 export const metadata = {
