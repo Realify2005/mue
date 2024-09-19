@@ -2,8 +2,8 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { fetchNotionDatabase } from '../components/api/fetchNotionDatabase';
-import { fetchMostRecentEventsNotionUpdate} from '../components/api/fetchMostRecentEventsNotionUpdate';
-import EventCard from '../components/events/EventCard';
+import { fetchMostRecentEventsNotionUpdate } from '../components/api/fetchMostRecentEventsNotionUpdate';
+import EventsPageContent from '../components/events/EventsPageContent';
 
 export const metadata = {
   title: 'Events | MUE',
@@ -56,33 +56,12 @@ const EventsPage: React.FC = async () => {
           </p>
         </div>
       </div>
-      <div className="px-5 pb-5 md:px-80 flex flex-col justify-center items-center py-20 bg-gradient-to-r from-indigo-100 from-10% via-sky-100 via-30% to-emerald-100 to-90%">
-        <p className="text-sm text-gray-500 mb-4">
-          All times shown are in <span className="font-bold text-black">AEST</span>.
-        </p>
-        <p className="text-sm text-gray-500 mb-4">
-          Last updated at {lastUpdatedAt}. 
-        </p>
-        <h1 className="text-4xl font-bold mb-8">Upcoming Events</h1>
-        {upcomingEvents.length > 0 ? (
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {upcomingEvents.map(event => <EventCard key={event.name} event={event} />)}
-          </div>
-        ) : (
-          <p>No upcoming events :(</p>
-        )}
-        <h1 className="text-4xl font-bold mt-12 mb-8">Past Events</h1>
-        {pastEvents.length > 0 ? (
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {pastEvents.map(event => <EventCard key={event.name} event={event} />)}
-          </div>
-        ) : (
-          <p>No past events in the last 30 days</p>
-        )}
-        <p className="text-sm text-gray-500 my-4">
-          Only events held in the past <span className="font-bold text-black">30 days</span> are shown. 
-        </p>
-      </div>
+      {/* Pass events data to the client-side component */}
+      <EventsPageContent
+        upcomingEvents={upcomingEvents}
+        pastEvents={pastEvents}
+        lastUpdatedAt={lastUpdatedAt}
+      />
       <Footer />
     </>
   );
