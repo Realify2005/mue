@@ -33,6 +33,14 @@ const categories = [
 const EventsPageContent: React.FC<EventsPageContentProps> = ({ upcomingEvents, pastEvents, lastUpdatedAt }) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
+  const handleCategoryClick = (category: string) => {
+    if (selectedCategory === category) {
+      setSelectedCategory(null);
+    } else {
+      setSelectedCategory(category);
+    }
+  };
+
   const filteredUpcomingEvents = selectedCategory 
     ? upcomingEvents.filter(event => event.tags.includes(selectedCategory)) 
     : upcomingEvents;
@@ -48,7 +56,7 @@ const EventsPageContent: React.FC<EventsPageContentProps> = ({ upcomingEvents, p
         {categories.map((category) => (
           <button
             key={category}
-            onClick={() => setSelectedCategory(category)}
+            onClick={() => handleCategoryClick(category)}
             className={`py-2 px-4 rounded-lg border-2 transition ${
               selectedCategory === category 
                 ? 'border-blue-500 bg-blue-100' 
