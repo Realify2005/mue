@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { fetchNotionDatabase } from '../components/api/fetchNotionDatabase';
+import { fetchEventsInfo } from '../components/api/fetchEventsInfo';
 import { fetchMostRecentEventsNotionUpdate } from '../components/api/fetchMostRecentEventsNotionUpdate';
 import EventsPageContent from '../components/events/EventsPageContent';
 
@@ -26,7 +26,7 @@ export const metadata = {
 export const revalidate = 0;
 
 const EventsPage: React.FC = async () => {
-  const data = await fetchNotionDatabase();
+  const data = await fetchEventsInfo();
   const now = new Date();
   const past30Days = new Date();
   past30Days.setDate(now.getDate() - 30);

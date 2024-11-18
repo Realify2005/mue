@@ -2,8 +2,8 @@ const { Client } = require('@notionhq/client');
 
 const notion = new Client({ auth: process.env.NOTION_API_TOKEN });
 
-export async function fetchNotionDatabase() {
-  const databaseId = process.env.NOTION_DATABASE_ID;
+export async function fetchEventsInfo() {
+  const databaseId = process.env.NOTION_EVENTS_DATABASE_ID;
   const response = await notion.databases.query({ database_id: databaseId});
 
   const indexedData = response.results

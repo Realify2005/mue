@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { fetchCommitteeInfo } from '../components/api/fetchCommitteeInfo';
 
 export const metadata = {
   title: 'Our Committee | MUE',
@@ -23,6 +24,8 @@ export const metadata = {
 export const revalidate = 0;
 
 const CommitteePage: React.FC = async () => {
+  const data = await fetchCommitteeInfo();
+  console.log(data);
   return (
     <>
       <Navbar />

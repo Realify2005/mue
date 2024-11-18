@@ -3,7 +3,7 @@ import { Client } from '@notionhq/client';
 const notion = new Client({ auth: process.env.NOTION_API_TOKEN });
 
 export async function fetchMostRecentEventsNotionUpdate() {
-  const databaseId = process.env.NOTION_DATABASE_ID;
+  const databaseId = process.env.NOTION_EVENTS_DATABASE_ID;
   const response = await notion.databases.query({
     database_id: databaseId,
     sorts: [

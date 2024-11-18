@@ -30,7 +30,7 @@ const categories = [
   "✨ Special"
 ];
 
-const EventsPageContent: React.FC<EventsPageContentProps> = ({ upcomingEvents, pastEvents, lastUpdatedAt }) => {
+const   EventsPageContent: React.FC<EventsPageContentProps> = ({ upcomingEvents, pastEvents, lastUpdatedAt }) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const handleCategoryClick = (category: string) => {
