@@ -11,6 +11,7 @@ export async function fetchCommitteeInfo() {
     .map(page => {
       return {
         name: page.properties.Name.title[0]?.plain_text,
+        image: page.properties.Photo.files[0].file.url,
         department: page.properties.Department.multi_select.map(department => department.name),
         role: page.properties.Role.select.name,
         about: page.properties.About.rich_text[0]?.plain_text,
