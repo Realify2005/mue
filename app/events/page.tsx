@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { fetchEventsInfo } from '../components/api/fetchEventsInfo';
 import { fetchMostRecentEventsNotionUpdate } from '../components/api/fetchMostRecentEventsNotionUpdate';
 import EventsPageContent from '../components/events/EventsPageContent';
+import EventsSkeleton from '../components/events/EventsSkeleton';
 
 export const metadata = {
   title: 'Events | MUE',
@@ -57,11 +58,13 @@ const EventsPage: React.FC = async () => {
         </div>
       </div>
       {/* Pass events data to the client-side component */}
-      <EventsPageContent
-        upcomingEvents={upcomingEvents}
-        pastEvents={pastEvents}
-        lastUpdatedAt={lastUpdatedAt}
-      />
+      <Suspense fallback={<EventsSkeleton />}>
+        <EventsPageContent
+          upcomingEvents={upcomingEvents}
+          pastEvents={pastEvents}
+          lastUpdatedAt={lastUpdatedAt}
+        />
+      </Suspense>
       <Footer />
     </>
   );

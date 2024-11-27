@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { fetchCommitteeInfo } from '../components/api/fetchCommitteeInfo';
+import CommitteeSkeleton from '../components/committee/CommitteeSkeleton';
 
 export const metadata = {
   title: 'Our Committee | MUE',
@@ -56,39 +57,41 @@ const CommitteePage: React.FC = async () => {
         </div>
       </div>
 
-      {/* Render Departments */}
-      {[
-        { title: 'Executives', data: executives, bg: 'bg-gray-100' },
-        { title: 'Technical Department', data: technical, bg: 'bg-white' },
-        { title: 'Events Department', data: events, bg: 'bg-gray-100' },
-        { title: 'Publicity Department', data: publicity, bg: 'bg-white' },
-        { title: 'Game/Esports Department', data: games, bg: 'bg-gray-100' },
-      ].map((section) => (
-        <div key={section.title} className={`py-12 px-5 md:px-32 ${section.bg}`}>
-          <h3 className="text-4xl font-semibold text-center mb-8">{section.title}</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {section.data.map((member: any) => {
-              const roleStyle = roleStyles[member.role] || "text-gray-600"; // Default style
-              return (
-                <div
-                  key={member.name}
-                  className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
-                >
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-32 h-32 rounded-full mb-4"
-                  />
-                  <h4 className="text-xl font-semibold">{member.name}</h4>
-                  <p className={`mb-4 ${roleStyle}`}>{member.role}</p>
-                  <p className="text-gray-700 italic text-center mb-4">{member.about}</p>
-                  <p className="text-gray-800">discord: {member.discord}</p>
-                </div>
-              );
-            })}
+      <Suspense fallback={<CommitteeSkeleton />}>
+        {/* Render Departments */}
+        {[
+          { title: 'Executives', data: executives, bg: 'bg-gray-100' },
+          { title: 'Technical Department', data: technical, bg: 'bg-white' },
+          { title: 'Events Department', data: events, bg: 'bg-gray-100' },
+          { title: 'Publicity Department', data: publicity, bg: 'bg-white' },
+          { title: 'Game/Esports Department', data: games, bg: 'bg-gray-100' },
+        ].map((section) => (
+          <div key={section.title} className={`py-12 px-5 md:px-32 ${section.bg}`}>
+            <h3 className="text-4xl font-semibold text-center mb-8">{section.title}</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {section.data.map((member: any) => {
+                const roleStyle = roleStyles[member.role] || "text-gray-600"; // Default style
+                return (
+                  <div
+                    key={member.name}
+                    className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
+                  >
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-32 h-32 rounded-full mb-4"
+                    />
+                    <h4 className="text-xl font-semibold">{member.name}</h4>
+                    <p className={`mb-4 ${roleStyle}`}>{member.role}</p>
+                    <p className="text-gray-700 italic text-center mb-4">{member.about}</p>
+                    <p className="text-gray-800">discord: {member.discord}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </Suspense>
 
       {/* Disclaimer */}
       <div className="py-6 px-5 md:px-32 bg-gray-200 text-center">
