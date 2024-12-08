@@ -15,6 +15,7 @@ const config: Config = {
       },
       boxShadow: {
         'solid': '10px 10px 0 0 rgb(0 0 0)',
+        'hidden': '5px 5px 0 0 rgb(0 0 0)',
       }
     },
   },
