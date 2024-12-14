@@ -25,6 +25,10 @@ const LinkPage = () => {
                 <LinkBar title="📱MUE Facebook📱" link="https://www.facebook.com/MelbUniEsports/" image="/logos/icons/facebook.png"></LinkBar>
                 <LinkBar title="MUE WeChat 微信" link="https://u.wechat.com/kPJgYn2Wn1W2P9MC7gyqKU8" image="/logos/icons/wechat.png"></LinkBar>
                 <LinkBar title="🎬MUE TikTok🎬" link="https://www.tiktok.com/@melbuniesports" image="/logos/icons/tiktok.png"></LinkBar>
+                <div className='mt-8 flex flex-col justify-center items-center'>
+                    <p className='text-2xl'>Contact</p>
+                </div>
+                <LinkBar title="Sponsors/Marketing Contact" link="mailto:publicity.melbuniesports@gmail.com" image=""></LinkBar>
             </div>
         <Footer />
     </>
