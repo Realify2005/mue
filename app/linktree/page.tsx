@@ -9,9 +9,15 @@ const LinkPage = () => {
     <>
         <Navbar />
             <div className="mt-12 px-5 py-8 md:px-80 flex flex-col justify-center items-center bg-white">
+            <Image className="rounded-full" src="/logos/MUE_no_words.webp" width={200} height={200} alt="muelogo" />
+            <div className='mt-12 flex flex-col justify-center items-center'>
+                    <h1 className='text-3xl'>@MelbUniEsports</h1>
+                    <p className='text-2xl'>Your home of Esports and Gaming at @unimelb! 🏆🎮</p>
+                </div>
+                
                 <LinkBar title="🎮MUE Membership 2025! 🎮" link="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6725/" image="/logos/icons/umsu.png"/>
-                <div className='mt-12 flex flex-col justify-center items-center'>
-                    <p className='text-3xl mb-12'>🙌 JOIN US 🙌</p>
+                <div className='mt-8 flex flex-col justify-center items-center'>
+                    <p className='text-2xl'>🙌 JOIN US 🙌</p>
                 </div>
                 <LinkBar title="👾 MUE Discord Server 👾" link="https://discord.gg/VvXuE2NGX6" image="/logos/icons/discord.png"/>
                 <LinkBar title="📸MUE Instagram📸" link="https://www.instagram.com/melbuniesports/" image="/logos/icons/instagram.png"></LinkBar>
