@@ -52,7 +52,7 @@ const   EventsPageContent: React.FC<EventsPageContentProps> = ({ upcomingEvents,
   return (
     <div className="bg-gradient-to-r from-indigo-100 from-10% via-sky-100 via-30% to-emerald-100 to-90%">
       {/* Category Filters */}
-      <div className="flex justify-center space-x-4 pt-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:justify-center gap-4 pt-8">
         {categories.map((category) => (
           <button
             key={category}
@@ -67,6 +67,7 @@ const   EventsPageContent: React.FC<EventsPageContentProps> = ({ upcomingEvents,
           </button>
         ))}
       </div>
+
 
       <div className="px-5 pb-5 md:px-80 flex flex-col justify-center items-center py-20">
         <p className="text-sm text-gray-500 mb-4">
