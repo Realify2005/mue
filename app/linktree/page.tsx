@@ -8,7 +8,7 @@ const LinkPage = () => {
   return (
     <>
         <Navbar />
-            <div className="mt-12 px-5 py-8 md:px-80 flex flex-col justify-center items-center bg-gradient-to-b from-teal-500 to-blue-500">
+            <div className="mt-12 px-5 py-8 lg:px-80 flex flex-col justify-center items-center bg-gradient-to-b from-teal-500 to-blue-500">
             <Image className="rounded-full" src="/logos/MUE_no_words.webp" width={150} height={150} alt="muelogo" />
             <div className='mt-12 flex flex-col justify-center items-center'>
                     <h1 className='text-3xl text-white'>@MelbUniEsports</h1>
