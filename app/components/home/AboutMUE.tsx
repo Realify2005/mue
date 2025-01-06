@@ -16,8 +16,8 @@ const AboutMUE: React.FC = () => {
                 </Link>
             </button>
             </div>
-            <div className="relative h-screen md:h-full">
-                <Image
+                <div className="relative h-screen md:h-full">
+                    <Image
                     src="/photos/home_photo_1.jpg"
                     alt="Picture of a group of people attending an in-person event hosted by MUE"
                     layout="fill"
