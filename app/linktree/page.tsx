@@ -24,7 +24,7 @@ const LinkPage = () => {
 
         <LinkBar title="👾 MUE Discord Server 👾" link="https://discord.gg/VvXuE2NGX6" image="/logos/icons/discord.png" />
         <LinkBar title="📸MUE Instagram📸" link="https://www.instagram.com/melbuniesports/" image="/logos/icons/instagram.png" />
-        <LinkBar title="🌐MUE WEBSITE 🌐" link="https://www.melbuniesports.com/" image="/logos/mue.png" />
+        <LinkBar title="🌐MUE WEBSITE 🌐" link="https://www.melbuniesports.com/" image="/logos/MUE.png" />
         <LinkBar title="MUE 小红书" link="https://www.xiaohongshu.com/user/profile/6596163500000000220065a5" image="/logos/icons/w.webp" />
         <LinkBar title="📱MUE Facebook📱" link="https://www.facebook.com/MelbUniEsports/" image="/logos/icons/facebook.png" />
         <LinkBar title="MUE WeChat 微信" link="https://u.wechat.com/kPJgYn2Wn1W2P9MC7gyqKU8" image="/logos/icons/wechat.png" />
