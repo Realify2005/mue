@@ -98,6 +98,9 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link href="/committee" className="block text-gray-900 hover:text-black">Our Committee</Link>
                   </li>
+                  <li>
+                    <Link href="/linktree" className="block text-gray-900 hover:text-black">Linktree</Link>
+                  </li>
                 </ul>
               )}
             </li>

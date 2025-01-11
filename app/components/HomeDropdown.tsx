@@ -47,6 +47,15 @@ const HomeDropdown = () => {
                                     Our Committee
                                 </Link>
                             </li>
+                            <li>
+                                <Link
+                                    href="/linktree"
+                                    className="block px-4 py-2 text-black text-sm hover:bg-black hover:text-white"
+                                    onClick={closeDropdown}
+                                >
+                                    Linktree
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 )}
