@@ -99,10 +99,7 @@ const CommitteePage: React.FC = async () => {
           This page may not include all committee members.
         </p>
       </div>
-
-      <Footer />
-
-
+      
       <Footer />
     </>
   );
