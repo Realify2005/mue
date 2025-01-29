@@ -24,7 +24,7 @@ const tiers = [
     name: 'Non-Unimelb',
     id: 'tier-nonunimelb',
     href: membershipLink,
-    priceMonthly: '$10',
+    priceMonthly: '$15',
     description: 'For non-unimelb students',
     features: [
       'Free entrance to most of our events and workshops (Free food & drinks)',
