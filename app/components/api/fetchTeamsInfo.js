@@ -7,7 +7,7 @@ export async function fetchInfo(game) {
     const response = await notion.databases.query({
         database_id: databaseId,
         "filter": {
-           "property" : "Title",
+           "property" : "Game",
             "select": {
                 "equals" : game
             }
@@ -28,5 +28,5 @@ export async function fetchInfo(game) {
 export async function fetchTeamInfo(game, team) {
     const data = await fetchInfo(game);
     const teamInfo = data.filter(player => player.team == team)
-    return teamInfo
+    return teamInfo  
 }
