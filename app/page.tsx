@@ -57,7 +57,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Navbar />
-      <section className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/photos/gic2024_photo_1.jpg')" }}>
+      <section className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/photos/gic2024_photo_3.jpg')" }}>
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
