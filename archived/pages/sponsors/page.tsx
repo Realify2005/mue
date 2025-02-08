@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 //import Navbar from '../components/Navbar'
 //import Footer from '../components/Footer'
 import Link from 'next/link'
@@ -38,4 +38,4 @@ const SponsorsPage: React.FC = () => {
     )
 }
 
-export default SponsorsPage
+export default SponsorsPage */
