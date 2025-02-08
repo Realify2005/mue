@@ -48,7 +48,7 @@ export default function RootLayout({
           })}
         </script>
       </Head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-mue`}>
         {children}
         <Analytics/>
       </body>
