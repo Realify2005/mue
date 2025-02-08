@@ -24,7 +24,7 @@ const Home: React.FC = () => {
       button: { text: "Join our Discord", link: process.env.MUE_DISCORD_PERMALINK || "https://discord.gg/NHAFvPqTDt" },
       /* In the actual code below, index == 0 is substituted with discord's iframe widget */
       /* So the images and links "content" here are not relevant, however please don't remove them */
-      image: "/photos/hero_section_photo_1.jpg",
+      image: "/photos/gic2024_photo_1.jpg",
       links: [
         { text: "Competitive gaming", link: process.env.MUE_DISCORD_PERMALINK || "https://discord.gg/NHAFvPqTDt", description: "for those with a competitive edge" },
         { text: "Casual gaming", link: process.env.MUE_DISCORD_PERMALINK || "https://discord.gg/NHAFvPqTDt", description: "for those just looking to have a fun time" },
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
       category: "Esports",
       title: "Represent the Melbourne University in official tournaments",
       button: { text: "Registrations", link: "/games" },
-      image: "/photos/hero_section_photo_2.jpg",
+      image: "/photos/agm2024_photo_1.jpg",
       links: [
         { text: "Registrations dates", link: "/games", description: "for those with a competitive edge"  },
         { text: "Rules & regulations", link: "/games", description: "to see eligibility"  },
@@ -46,7 +46,7 @@ const Home: React.FC = () => {
       category: "Friday Weekly Gaming",
       title: "Join us on campus",
       button: { text: "See Events", link: "/events" },
-      image: "/photos/hero_section_photo_3.jpg",
+      image: "/photos/campus2024_photo_1.jpg",
       links: [
         { text: "Registrations dates", link: "/events", description: "for those with a competitive edge"  },
         { text: "Rules & regulations", link: "/events", description: "to see eligibility"  }
