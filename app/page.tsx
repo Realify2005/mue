@@ -182,7 +182,7 @@ const Home: React.FC = () => {
       <section className="py-32 text-center text-white">
         <h2 className="text-4xl font-bold">Get in touch</h2>
         <p className="mt-2 text-lg text-gray-300">
-          Want to become part of supporting the gaming culture at UniMelb's biggest gaming club?
+          Want to become part of supporting the gaming culture at UniMel&apos;s biggest gaming club?
         </p>
         <Link
           href="mailto:melbuniesports@gmail.com"
