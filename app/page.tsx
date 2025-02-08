@@ -70,7 +70,7 @@ const Home: React.FC = () => {
           </p>
 
           <Link
-            href="/join"
+            href="https://discord.gg/NHAFvPqTDt"
             className="mt-6 bg-[#FFD700] text-black font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-[#FFC107] transition"
           >
             JOIN NOW &#x276F;
