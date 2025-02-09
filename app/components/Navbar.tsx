@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
           <Image src="/logos/MUE_wide.png" alt="MUE Wide logo" width={0} height={0} sizes="100vw" className="w-full h-16" />
         </Link>
         <Link href='/' className="block lg:hidden">
-          <Image src="/logos/MUE.png" alt="MUE Wide logo" width={0} height={0} sizes="100vw" className="w-full h-16" />
+          <Image src="/logos/MUE.png" alt="MUE logo" width={0} height={0} sizes="100vw" className="w-full h-16" />
         </Link>
 
       </div>
