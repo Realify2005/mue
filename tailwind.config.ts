@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+const flowbite = require('flowbite-react/tailwind');
+
 const config: Config = {
   content: [
     "./app/pages/**/*.{js,ts,jsx,tsx,mdx}",

@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { ChevronDown } from "lucide-react";
 
 const Navbar: React.FC = () => {
   return (
@@ -42,7 +43,7 @@ const Navbar: React.FC = () => {
                 <li><Link href='/games'>Focused Games</Link></li>
               </ul>
             </li>
-            <li className="text-red-500"> Shop (Coming Soon)</li>
+            <li><Link href='https://shop.melbuniesports.com' target="_blank" rel="noopener noreferrer">Shop</Link></li>
           </ul>
         </div>
 
@@ -53,32 +54,38 @@ const Navbar: React.FC = () => {
         <Link href='/' className="block lg:hidden">
           <Image src="/logos/MUE.png" alt="MUE logo" width={0} height={0} sizes="100vw" className="w-full h-16" />
         </Link>
-
       </div>
+
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li><Link href='/events'>Events</Link></li>
           <li>
-            <details>
-              <summary>About</summary>
-              <ul className="p-2">
+            <div className="dropdown">
+              <div tabIndex={0} role="button" className="flex">
+                About <ChevronDown className="m-1 w-4 h-4" />
+              </div>
+              <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box mt-64 z-1 w-52 p-2 shadow-sm">
+                {/* When changing the number of links in dropdown, please change the top margin of parent dropdown (mt) */}
                 <li><Link href='/'>Welcome Page</Link></li>
                 <li><Link href='/linktree'>Linktree</Link></li>
                 <li><Link href='/committee'>Committee</Link></li>
                 <li><Link href='/membership'>Membership</Link></li>
                 <li><Link href='/faq'>Frequently Asked Questions</Link></li>
               </ul>
-            </details>
+            </div>
           </li>
           <li>
-            <details>
-              <summary>Games</summary>
-              <ul className="p-2">
+            <div className="dropdown">
+              <div tabIndex={0} role="button" className="flex">
+                Games <ChevronDown className="m-1 w-4 h-4" />
+              </div>
+              <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box mt-24 z-1 w-52 p-2 shadow-sm">
+                {/* When changing the number of links in dropdown, please change the top margin of parent dropdown (mt) */}
                 <li><Link href='/games'>Focused Games</Link></li>
               </ul>
-            </details>
+            </div>
           </li>
-          <li><Link href='/' className="text-red-500">Shop (Coming Soon)</Link></li>
+          <li><Link href='https://shop.melbuniesports.com' target="_blank" rel="noopener noreferrer">Shop</Link></li>
         </ul>
       </div>
       <div className="navbar-end">
