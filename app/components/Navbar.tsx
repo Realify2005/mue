@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
     <div className="navbar bg-[#000F46] px-4 lg:px-24 py-4 text-white shadow-md shadow-black sticky top-0 w-full z-50">
       <div className="navbar-start">
         <div className="dropdown">
+          {/* Mobile Navbar Icon */}
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -23,29 +24,30 @@ const Navbar: React.FC = () => {
                 d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-[#1E3A8A] rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li><Link href='/events'>Events</Link></li>
-            <li>
-              <a>About</a>
-              <ul className="p-2">
-                <li><Link href='/'>Welcome Page</Link></li>
-                <li><Link href='/linktree'>Linktree</Link></li>
-                <li><Link href='/committee'>Committee</Link></li>
-                <li><Link href='/membership'>Membership</Link></li>
-                <li><Link href='/faq'>Frequently Asked Questions</Link></li>
-              </ul>
-            </li>
-            <li>
-              <a>Games</a>
-              <ul className="p-2">
-                <li><Link href='/games'>Focused Games</Link></li>
-              </ul>
-            </li>
-            <li><Link href='https://shop.melbuniesports.com' target="_blank" rel="noopener noreferrer">Shop</Link></li>
-          </ul>
-        </div>
+          {/* Mobile Menu */}
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-[#1E3A8A] rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><Link href='/events'>Events</Link></li>
+              <li>
+                <a>About</a>
+                <ul className="p-2">
+                  <li><Link href='/'>Welcome Page</Link></li>
+                  <li><Link href='/linktree'>Linktree</Link></li>
+                  <li><Link href='/committee'>Committee</Link></li>
+                  <li><Link href='/membership'>Membership</Link></li>
+                  <li><Link href='/faq'>Frequently Asked Questions</Link></li>
+                </ul>
+              </li>
+              <li>
+                <a>Games</a>
+                <ul className="p-2">
+                  <li><Link href='/games'>Focused Games</Link></li>
+                </ul>
+              </li>
+              <li><Link href='https://shop.melbuniesports.com' target="_blank" rel="noopener noreferrer">Shop</Link></li>
+            </ul>
+          </div>
 
         {/* The below code style is used due to desktop and mobile version having swapping places MUE logo */}
         <Link href='/' className="hidden lg:block">
@@ -56,6 +58,7 @@ const Navbar: React.FC = () => {
         </Link>
       </div>
 
+      {/* Desktop Navbar Center */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li><Link href='/events'>Events</Link></li>
