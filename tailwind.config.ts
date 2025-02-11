@@ -18,9 +18,16 @@ const config: Config = {
       boxShadow: {
         'solid': '10px 10px 0 0 rgb(0 0 0)',
         'hidden': '5px 5px 0 0 rgb(0 0 0)',
-      },
+      }, 
       width: {
         'adjust': 'calc(100vw - 3rem)',
+      },
+      colors: {
+        'MUE-dark-blue': '#000F46',
+        'MUE-sky-blue': '#46C8F0',
+        'MUE-white': '#FAF9F6',
+        'MUE-yellow': '#FFD629',
+        'MUE-footer': '#0D1B50',
       }
     },
   },

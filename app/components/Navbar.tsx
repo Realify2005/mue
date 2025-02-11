@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="navbar bg-[#000F46] px-4 lg:px-24 py-4 text-white shadow-md shadow-black sticky top-0 w-full z-50">
+    <div className="navbar bg-MUE-dark-blue px-4 lg:px-24 py-4 text-white shadow-md shadow-black sticky top-0 w-full z-50">
       <div className="navbar-start">
         <div className="dropdown">
           {/* Mobile Navbar Icon */}

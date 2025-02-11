@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
           <Link
             href="https://discord.gg/NHAFvPqTDt"
             target="_blank"
-            className="mt-6 bg-[#FFD700] text-black font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-[#FFC107] transition"
+            className="mt-6 bg-MUE-yellow text-black font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-[#FFC107] transition"
           >
             JOIN NOW &#x276F;
           </Link>

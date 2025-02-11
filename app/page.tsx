@@ -10,14 +10,14 @@ import Sponsors from './components/home/Sponsors'
 const Home: React.FC = () => {
 
   return (
-    <>
+    <div className="flex flex-col justify-center items-center">
       <Navbar />
       <HeroSection />
       <Sponsors />
       <ClubHighlights />
       <GetInTouch />
       <Footer />
-    </>
+    </div>
   )
 }
 
