@@ -14,15 +14,6 @@ interface Event {
   isNext: boolean;
 }
 
-const tagColors: { [key: string]: string } = {
-  "📅 Weeklies": 'bg-pink-200',
-  "🏆 Tournament": 'bg-yellow-200',
-  "🌏 Collab": 'bg-purple-200',
-  "📚 Trivia": 'bg-green-200',
-  "❄️ Winterfest": "bg-blue-200",
-  "✨ Special": "bg-orange-100"
-};
-
 const UpcomingEvents = ({ events }: { events: Event[] }) => {
   const [paused, setPaused] = useState(false);
   const animation = useAnimation();
@@ -50,7 +41,7 @@ const UpcomingEvents = ({ events }: { events: Event[] }) => {
 
   useEffect(() => {
     startAnimation();
-  }, []);
+  }, [animation]);
 
   // Duplicate events array 20 times to ensure smooth looping for carousel
   const duplicatedEvents = Array.from({ length: 20 }, () => events).flat();

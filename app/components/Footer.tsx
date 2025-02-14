@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaLinkedin, FaInstagram, FaFacebook, FaDiscord } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
@@ -10,12 +11,18 @@ const Footer: React.FC = () => {
           <div className="w-full lg:w-3/4">
             {/* Logo & Club Name */}
             <div className="flex flex-col lg:flex-row items-center mb-6">
-              <img src="/logos/MUE_transparent.png" alt="MUE Logo" className="h-20 mb-2 lg:mb-0" />
+            <Image 
+              src="/logos/MUE_transparent.png" 
+              alt="MUE Logo" 
+              width={80} 
+              height={80} 
+              className="h-20 w-auto mb-2 lg:mb-0" 
+            />
               <h2 className="text-lg font-bold text-center lg:mr-8">MELBOURNE UNIVERSITY ESPORTS & GAMING</h2>
             </div>
 
             {/* Slogan */}
-            <p className="flex text-gray-300 text-sm mb-6 justify-center lg:items-start">
+            <p className="flex text-gray-300 text-sm mb-6 justify-center lg:justify-start">
               Connected by campus, powered by play
             </p>
 
