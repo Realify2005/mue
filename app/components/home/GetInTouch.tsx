@@ -1,39 +1,46 @@
-import React from 'react'
-import Image from 'next/image'
-import SocialMediaIcons from '../SocialMediaIcons'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const GetInTouch: React.FC = () => {
-    return (
-        <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-10 md:p-40 flex flex-col justify-center items-center bg-black text-white">
-                <h2 className="my-12 text-4xl font-extrabold">Get In Touch</h2>
-                <h6 className="my-4 text-2xl font-extrabold">Address:</h6>
-                <p className="my-2 text-base text-white">Mailbox 122, First Floor Union House</p>
-                <p className="my-2 text-base text-white">The University of Melbourne 3010, VIC</p>
-                <h6 className="my-4 text-2xl font-extrabold">For enquiries, please email us at</h6>
-                <a href="mailto:melbuniesports@gmail.com" className="my-2 text-base text-white">melbuniesports@gmail.com</a>
-                <h6 className="my-4 text-2xl font-extrabold">Alternatively, feel free to chat to us on</h6>
-                <a className="mb-24" href={process.env.MUE_DISCORD_PERMALINK} target="_blank" rel="noopener noreferrer">
-                    <Image 
-                        src="/logos/discord.png"
-                        alt="Discord logo"
-                        width={250}
-                        height={200}
-                    />
-                </a>
-                <SocialMediaIcons />
-            </div>
-            <div className="relative h-screen md:h-full">
-                <Image 
-                    src="/photos/home_photo_4.jpg"
-                    alt="Picture of MUE stand inside of Trinity College Foundation Studies"
-                    layout="fill"
-                    objectFit="cover"
-                    className="object-cover w-full"
-                />
-            </div>
+  return (
+    <section className="px-4 pb-16 lg:px-32 xl:px-56 lg:pb-32 text-white">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-64 items-center">
+        <div className="text-center lg:text-left">
+          <h2 className="mb-8 lg:mb-0 text-4xl xl:text-5xl font-bold">Get in touch</h2>
+          <p className="mt-2 text-base xl:text-lg text-gray-300">
+            Want to become part of supporting the gaming culture at Unimelb&apos;s biggest gaming club?
+          </p>
+          
+          <div className="flex py-8 lg:py-0 justify-center lg:justify-end block lg:hidden">
+            <Image 
+              src="/photos/mue_stickers_photo.jpg"
+              alt="Get in touch image"
+              width={450} 
+              height={350} 
+              className="object-contain"
+            />
+          </div>
+
+          <Link
+            href="mailto:melbuniesports@gmail.com"
+            className="mt-6 inline-block bg-MUE-sky-blue text-black font-bold py-3 px-6 rounded-full text-lg xl:text-xl hover:bg-MUE-sky-blue-hover transition shadow-md"
+          >
+            Become a Sponsor →
+          </Link>
         </div>
-    );
-};
+        <div className="flex justify-center lg:justify-end hidden lg:block">
+          <Image 
+            src="/photos/mue_stickers_photo.jpg"
+            alt="Get in touch image"
+            width={450} 
+            height={350} 
+            className="object-contain"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default GetInTouch;

@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,9 +22,23 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/api/fetchEventsInfo.js", "app/components/api/fetchEventsInfo.js", "app/components/events/EventsCard.jsx", "app/pages/_document.jsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/components/api/fetchEventsInfo.js",
+    "app/components/api/fetchEventsInfo.js",
+    "app/components/events/EventsCard.jsx",
+    "app/pages/_document.jsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

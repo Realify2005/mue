@@ -5,7 +5,6 @@ const notion = new Client({ auth: process.env.NOTION_API_TOKEN });
 export async function fetchEventsInfo() {
   const databaseId = process.env.NOTION_EVENTS_DATABASE_ID;
   const response = await notion.databases.query({ database_id: databaseId});
-
   const indexedData = response.results
     .filter(page => page.properties.Finalised.checkbox)
     .map(page => {
