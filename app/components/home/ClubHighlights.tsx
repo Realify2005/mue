@@ -73,7 +73,7 @@ const ClubHighlights: React.FC = () => {
 
 const HighlightSection: React.FC<{ section: SectionType, index: number }> = ({ section, index }) => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 1 });
 
   useEffect(() => {
     if (inView) {
