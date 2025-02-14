@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useAnimation } from 'framer-motion';
@@ -73,7 +73,22 @@ const ClubHighlights: React.FC = () => {
 
 const HighlightSection: React.FC<{ section: SectionType, index: number }> = ({ section, index }) => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 1 });
+  const [threshold, setThreshold] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setThreshold(window.innerWidth < 768 ? 0.3 : 1);
+    };
+
+    handleResize(); // Set the initial threshold
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const { ref, inView } = useInView({ triggerOnce: true, threshold });
 
   useEffect(() => {
     if (inView) {
