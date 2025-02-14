@@ -18,7 +18,8 @@ const UpcomingEventsServer = async () => {
       month: dayjs(event.date).format('MMM').toUpperCase(), // Get the 3-letter month abbreviation
       title: event.name, 
       isNext: false, // Initialize isNext as false
-    }));
+    }))
+    .reverse();
 
   // Mark the first event as the next upcoming event
   if (events.length > 0) {
