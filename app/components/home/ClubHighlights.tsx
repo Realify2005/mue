@@ -1,6 +1,9 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const highlights = [
   {
@@ -42,21 +45,81 @@ const ClubHighlights: React.FC = () => {
   return (
     <section className="py-12 text-white">
       <div className="container mx-auto space-y-40 px-8 lg:px-24">
-        {highlights.map((section, index) => (
-          <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-32 items-center">
-            {/* Text Content */}
-            <div>
-              <span className="text-2xl text-white font-bold flex items-center">
-                {section.icon} {section.category}
-              </span>
-              <h2 className="text-4xl font-bold my-4">{section.title}</h2>
+        {highlights.map((section, index) => {
+          const controls = useAnimation();
+          const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
-              {/* MOBILE ONLY: Image before "See Also" section */}
-              <div className="flex justify-center block lg:hidden py-6">
+          useEffect(() => {
+            if (inView) {
+              controls.start({ opacity: 1, y: 0, transition: { duration: 2.5 } });
+            } else {
+              controls.start({ opacity: 0, y: 50 });
+            }
+          }, [inView]);
+
+          return (
+            <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-32 items-center" ref={ref}>
+              {/* Text Content */}
+              <motion.div animate={controls}>
+                <span className="text-2xl text-white font-bold flex items-center">
+                  {section.icon} {section.category}
+                </span>
+                <h2 className="text-4xl font-bold my-4">{section.title}</h2>
+
+                {/* MOBILE ONLY: Image before "See Also" section */}
+                <div className="flex justify-center block md:hidden py-6">
+                  {index === 0 ? (
+                    <iframe
+                      className="rounded-3xl shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
+                      src="https://discord.com/widget?id=483256492762595328&theme=dark"
+                      width="550"
+                      height="400"
+                      frameBorder="0"
+                      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                    ></iframe>
+                  ) : (
+                    <Image
+                      src={section.image}
+                      alt={section.category}
+                      width={550}
+                      height={400}
+                      className="rounded-3xl shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
+                    />
+                  )}
+                </div>
+
+                <Link
+                  href={section.button.link}
+                  target="_blank"
+                  className="inline-block bg-MUE-sky-blue text-black font-bold my-6 py-2 px-4 rounded-full text-2xl hover:bg-MUE-sky-blue-hover transition"
+                >
+                  {section.button.text} →
+                </Link>
+
+                {/* See Also Links */}
+                <div className="mt-4 text-sm">
+                  <p className="text-white font-semibold">See also</p>
+                  {section.links.map((link, i) => (
+                    <p className="my-2" key={i}>
+                      <Link href={link.link} target="_blank" className="text-blue-400 font-semibold hover:underline">
+                        {link.text}
+                      </Link>{' '}
+                      {link.description}
+                    </p>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Right Side: Image or Discord iframe (PC ONLY) */}
+              <motion.div
+                className="flex justify-center hidden md:block"
+                initial={{ opacity: 0, y: 50 }}
+                animate={controls}
+                transition={{ duration: 2.5 }}
+              >
                 {index === 0 ? (
-                  // First section: Replace the image with a Discord iframe
                   <iframe
-                    className="rounded-3xl shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
+                    className="rounded-3xl md:w-11/12 xl:w-full shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
                     src="https://discord.com/widget?id=483256492762595328&theme=dark"
                     width="550"
                     height="400"
@@ -64,7 +127,6 @@ const ClubHighlights: React.FC = () => {
                     sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
                   ></iframe>
                 ) : (
-                  // Other sections: Regular images
                   <Image
                     src={section.image}
                     alt={section.category}
@@ -73,55 +135,10 @@ const ClubHighlights: React.FC = () => {
                     className="rounded-3xl shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
                   />
                 )}
-              </div>
-
-              <Link
-                href={section.button.link}
-                target="_blank"
-                className="inline-block bg-MUE-sky-blue text-black font-bold my-6 py-2 px-4 rounded-full text-2xl hover:bg-[#2694D1] transition"
-              >
-                {section.button.text} →
-              </Link>
-
-              {/* See Also Links */}
-              <div className="mt-4 text-sm">
-                <p className="text-white font-semibold">See also</p>
-                {section.links.map((link, i) => (
-                  <p className="my-2" key={i}>
-                    <Link href={link.link} target="_blank" className="text-blue-400 font-semibold hover:underline">
-                      {link.text}
-                    </Link>{" "}
-                    {link.description}
-                  </p>
-                ))}
-              </div>
+              </motion.div>
             </div>
-
-            {/* Right Side: Image or Discord iframe (PC ONLY) */}
-            <div className="flex justify-center hidden lg:block">
-              {index === 0 ? (
-                // First section: Replace the image with a Discord iframe
-                <iframe
-                  className="rounded-3xl shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
-                  src="https://discord.com/widget?id=483256492762595328&theme=dark"
-                  width="550"
-                  height="400"
-                  frameBorder="0"
-                  sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                ></iframe>
-              ) : (
-                // Other sections: Regular images
-                <Image
-                  src={section.image}
-                  alt={section.category}
-                  width={550}
-                  height={400}
-                  className="rounded-3xl shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
-                />
-              )}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

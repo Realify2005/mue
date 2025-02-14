@@ -1,12 +1,29 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronDown } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="navbar bg-MUE-dark-blue px-4 lg:px-24 py-4 text-white shadow-md shadow-black sticky top-0 w-full z-50">
+    <div className="relative navbar bg-MUE-dark-blue px-4 lg:px-24 py-4 text-MUE-light-blue shadow-md shadow-black sticky top-0 w-full z-20">
+
+      {/* Yellow Lines */}
+      <svg
+        width="656"
+        height="163"
+        viewBox="0 0 656 163"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="hidden lg:block absolute top-[-60px] right-[-300px] flex-shrink-0 pointer-events-none"
+      >
+        <path
+          d="M136.685 -11.4007L7 151H290.983L323.167 119.156H609.99L663 -12"
+          stroke="var(--MUE-Yellow, #FFD629)"
+          strokeWidth="6"
+        />
+      </svg>
+
       <div className="navbar-start">
         <div className="dropdown">
           {/* Mobile Navbar Icon */}
@@ -27,25 +44,20 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu */}
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-[#1E3A8A] rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><Link href='/events'>Events</Link></li>
+              className="menu menu-sm dropdown-content bg-MUE-dark-blue rounded-box z-[1] mt-3 w-52 p-2 shadow">
               <li>
-                <a>About</a>
+                <a className="hover:text-MUE-yellow">About</a>
                 <ul className="p-2">
-                  <li><Link href='/'>Welcome Page</Link></li>
-                  <li><Link href='/linktree'>Linktree</Link></li>
-                  <li><Link href='/committee'>Committee</Link></li>
-                  <li><Link href='/membership'>Membership</Link></li>
-                  <li><Link href='/faq'>Frequently Asked Questions</Link></li>
+                  <li className="hover:text-MUE-yellow"><Link href='/'>Welcome Page</Link></li>
+                  <li className="hover:text-MUE-yellow"><Link href='/linktree'>Linktree</Link></li>
+                  <li className="hover:text-MUE-yellow"><Link href='/committee'>Committee</Link></li>
+                  <li className="hover:text-MUE-yellow"><Link href='/membership'>Membership</Link></li>
+                  <li className="hover:text-MUE-yellow"><Link href='/faq'>Frequently Asked Questions</Link></li>
                 </ul>
               </li>
-              <li>
-                <a>Games</a>
-                <ul className="p-2">
-                  <li><Link href='/games'>Focused Games</Link></li>
-                </ul>
-              </li>
-              <li><Link href='https://shop.melbuniesports.com' target="_blank" rel="noopener noreferrer">Shop</Link></li>
+              <li className="hover:text-MUE-yellow"><Link href='/events'>Events</Link></li>
+              <li className="hover:text-MUE-yellow"><Link href='/games' target="_blank" rel="noopener noreferrer">Games</Link></li>
+              <li className="hover:text-MUE-yellow"><Link href='https://shop.melbuniesports.com' target="_blank" rel="noopener noreferrer">Shop</Link></li>
             </ul>
           </div>
 
@@ -61,34 +73,24 @@ const Navbar: React.FC = () => {
       {/* Desktop Navbar Center */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><Link href='/events'>Events</Link></li>
           <li>
             <div className="dropdown">
-              <div tabIndex={0} role="button" className="flex">
-                About <ChevronDown className="m-1 w-4 h-4" />
+              <div tabIndex={0} role="button" className="flex justify-center items-center hover:text-MUE-yellow">
+                ABOUT <ChevronRight size={15}/>
               </div>
-              <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box mt-64 z-1 w-52 p-2 shadow-sm">
+              <ul tabIndex={0} className="dropdown-content menu bg-MUE-dark-blue rounded-box mt-64 z-1 w-52 p-2 shadow-sm">
                 {/* When changing the number of links in dropdown, please change the top margin of parent dropdown (mt) */}
-                <li><Link href='/'>Welcome Page</Link></li>
-                <li><Link href='/linktree'>Linktree</Link></li>
-                <li><Link href='/committee'>Committee</Link></li>
-                <li><Link href='/membership'>Membership</Link></li>
-                <li><Link href='/faq'>Frequently Asked Questions</Link></li>
+                <li className="hover:text-MUE-yellow"><Link href='/'>Welcome Page</Link></li>
+                <li className="hover:text-MUE-yellow"><Link href='/linktree'>Linktree</Link></li>
+                <li className="hover:text-MUE-yellow"><Link href='/committee'>Committee</Link></li>
+                <li className="hover:text-MUE-yellow"><Link href='/membership'>Membership</Link></li>
+                <li className="hover:text-MUE-yellow"><Link href='/faq'>Frequently Asked Questions</Link></li>
               </ul>
             </div>
           </li>
-          <li>
-            <div className="dropdown">
-              <div tabIndex={0} role="button" className="flex">
-                Games <ChevronDown className="m-1 w-4 h-4" />
-              </div>
-              <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box mt-24 z-1 w-52 p-2 shadow-sm">
-                {/* When changing the number of links in dropdown, please change the top margin of parent dropdown (mt) */}
-                <li><Link href='/games'>Focused Games</Link></li>
-              </ul>
-            </div>
-          </li>
-          <li><Link href='https://shop.melbuniesports.com' target="_blank" rel="noopener noreferrer">Shop</Link></li>
+          <li className="hover:text-MUE-yellow"><Link href='/events'>EVENTS</Link></li>
+          <li className="hover:text-MUE-yellow"><Link href='/games' target="_blank" rel="noopener noreferrer">GAMES</Link></li>
+          <li className="hover:text-MUE-yellow"><Link href='https://shop.melbuniesports.com' target="_blank" rel="noopener noreferrer">SHOP</Link></li>
         </ul>
       </div>
       <div className="navbar-end">
@@ -96,7 +98,7 @@ const Navbar: React.FC = () => {
           <Link
             href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6725/"
             target="_blank"
-            className="bg-[#46C8F0] text-[#000000] font-bold py-2 px-4 rounded-full text-sm hover:bg-[#2694D1] transition"
+            className="bg-MUE-yellow text-MUE-black font-bold py-2 px-4 rounded-full text-sm hover:bg-MUE-yellow-hover transition"
           >
             JOIN MUE &#x276F;
           </Link>
