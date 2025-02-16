@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 interface FAQ {
   id: number;
@@ -103,4 +103,4 @@ export const faqs: FAQ[] = [
   },
 ];
 
-export default faqs;
+export default faqs; */
