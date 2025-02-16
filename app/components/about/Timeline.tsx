@@ -17,7 +17,7 @@ const Timeline: React.FC = () => {
           iconStyle={{ background: "var(--MUE-sky-blue)" }}
           contentStyle={{ background: "var(--MUE-dark-blue)", border: "2px solid white" }}
           intersectionObserverProps={{
-            rootMargin: "0px 0px -100px 0px",
+            rootMargin: "10000px 0px -100px 0px",
             threshold: 0.5,
           }}
         >
@@ -48,7 +48,7 @@ const Timeline: React.FC = () => {
           iconStyle={{ background: "var(--MUE-yellow)" }}
           contentStyle={{ background: "var(--MUE-dark-blue)", border: "2px solid white" }}
           intersectionObserverProps={{
-            rootMargin: "0px 0px -100px 0px",
+            rootMargin: "10000px 0px -100px 0px",
             threshold: 0.5,
           }}
         >
@@ -78,7 +78,7 @@ const Timeline: React.FC = () => {
           iconStyle={{ background: "var(--MUE-pink)" }}
           contentStyle={{ background: "var(--MUE-dark-blue)", border: "2px solid white" }}
           intersectionObserverProps={{
-            rootMargin: "0px 0px -100px 0px",
+            rootMargin: "10000px 0px -100px 0px",
             threshold: 0.5,
           }}
         >

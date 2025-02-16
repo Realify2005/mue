@@ -63,7 +63,7 @@ const HeroSection: React.FC = () => {
             <Link
               href="https://discord.gg/NHAFvPqTDt"
               target="_blank"
-              className="border-2 border-MUE-yellow hover:border-none text-MUE-yellow font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-MUE-yellow-hover hover:text-MUE-black transition"
+              className="border-2 border-MUE-yellow hover:border-MUE-yellow-hover text-MUE-yellow font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-MUE-yellow-hover hover:text-MUE-black transition"
             >
               OUR DISCORD
             </Link>
