@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
                 className="text-MUE-sky-blue font-bold hover:underline">
                 GET A MEMBERSHIP &gt;
               </Link>
-              <Link href="/contact" className="text-MUE-sky-blue font-bold hover:underline">
+              <Link href="mailto:melbuniesports@gmail.com" className="text-MUE-sky-blue font-bold hover:underline">
                 CONTACT US &gt;
               </Link>
             </div>

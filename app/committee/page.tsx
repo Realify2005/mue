@@ -81,6 +81,8 @@ const CommitteePage: React.FC = async () => {
                     <Image
                       src={member.image}
                       alt={member.name}
+                      height={128}
+                      width={128}
                       className="w-32 h-32 rounded-full mb-4"
                     />
                     <h4 className="text-xl font-semibold">{member.name}</h4>

@@ -31,6 +31,8 @@
     "react-email": "2.1.1",
     "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.15.1",
+    "react-timeline-animation": "^1.2.3",
+    "react-vertical-timeline-component": "^3.5.3",
     "resend": "^3.2.0",
     "vercel": "^35.0.3"
   },
@@ -39,6 +41,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "autoprefixer": "^10.0.1",
     "daisyui": "^4.12.23",
     "eslint": "^8",
