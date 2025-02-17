@@ -15,31 +15,33 @@ const InfinityScrollCarousel: React.FC = () => {
   // Duplicate the slides to create a seamless loop
   const allSlides = Array(100).fill(slides).flat();
 
-  const slideWidth = 600;
+  const slideWidthLg = 600;
+  const slideWidthMd = 400;
+  const slideWidthSm = 200;
 
-  const containerWidth = allSlides.length * slideWidth;
-
-  const visibleWidth = 1200;
+  const containerWidthLg = allSlides.length * slideWidthLg;
+  const containerWidthMd = allSlides.length * slideWidthMd;
+  const containerWidthSm = allSlides.length * slideWidthSm;
 
   return (
     <div className="bg-MUE-dark-blue flex flex-col items-center justify-center p-8">
-      <h2 className="flex align-left text-MUE-sky-blue text-5xl font-bold px-64 py-16 w-full">Gallery</h2>
+      <h2 className="text-MUE-sky-blue text-5xl font-bold mb-8 w-full text-left">Gallery</h2>
 
-      <div className="overflow-hidden" style={{ width: visibleWidth }}>
+      <div className="overflow-hidden w-full">
         <div
           className="flex"
           style={{
-            width: containerWidth,
-            animation: 'scrollLeft 15s linear infinite', 
+            width: containerWidthLg,
+            animation: 'scrollLeft 60s linear infinite', 
             // ↑ Adjust duration for slower or faster sliding
           }}
         >
           {allSlides.map((slide, index) => (
-            <div key={index} className="flex-none px-4" style={{ width: slideWidth }}>
+            <div key={index} className="flex-none px-4">
               <img
                 src={slide}
                 alt={`Slide ${index}`}
-                className="w-full h-auto object-cover rounded-md shadow-md"
+                className="w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] h-auto object-cover rounded-md shadow-md"
               />
             </div>
           ))}
@@ -53,8 +55,29 @@ const InfinityScrollCarousel: React.FC = () => {
             transform: translateX(0);
           }
           100% {
-            /* Slide half the track width: 3000px / 2 = 1500px */
-            transform: translateX(-1500px);
+            transform: translateX(-${containerWidthLg / 20}px);
+          }
+        }
+
+        @media (max-width: 1024px) {
+          @keyframes scrollLeft {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-${containerWidthMd / 20}px);
+            }
+          }
+        }
+
+        @media (max-width: 640px) {
+          @keyframes scrollLeft {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-${containerWidthSm / 20}px);
+            }
           }
         }
       `}</style>
