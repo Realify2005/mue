@@ -7,6 +7,8 @@ import Timeline from '../components/about/Timeline';
 import ImageCarousel from '../components/about/ImageCarousel';
 import FrequentlyAskedQuestions from '../components/about/FrequentlyAskedQuestions';
 
+export const revalidate = 0;
+
 const AboutPage: React.FC = () => {
   return (
     <>
