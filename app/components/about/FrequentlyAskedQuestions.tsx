@@ -92,7 +92,7 @@ const FrequentlyAskedQuestions: React.FC = () => {
                 className="border border-MUE-white rounded-lg overflow-hidden"
               >
                 <button
-                  className="w-full flex justify-between items-center px-8 py-4 focus:outline-none"
+                  className="w-full flex justify-between items-center px-8 py-4 focus:outline-none text-left"
                   onClick={() => toggleFAQ(index)}
                 >
                   <span className="font-semibold">
@@ -103,7 +103,7 @@ const FrequentlyAskedQuestions: React.FC = () => {
                   </span>
                 </button>
                 {activeIndex === index && (
-                  <div className="bg-MUE-black px-4 py-3">
+                  <div className="bg-MUE-black px-4 py-3 text-left">
                     <p className="text-sm">{item.answer}</p>
                   </div>
                 )}

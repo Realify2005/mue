@@ -27,7 +27,7 @@ const InfinityScrollCarousel: React.FC = () => {
     <div className="bg-MUE-dark-blue flex flex-col items-center justify-center p-8">
       <h2 className="text-MUE-sky-blue text-5xl font-bold mb-8 w-full text-left">Gallery</h2>
 
-      <div className="overflow-hidden w-full">
+      <div className="overflow-x-auto w-full">
         <div
           className="flex"
           style={{
