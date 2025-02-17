@@ -6,6 +6,18 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --MUE-dark-blue: #000F46;
+  --MUE-sky-blue: #46C8F0;
+  --MUE-sky-blue-hover: #3CAACB;
+  --MUE-ocean-blue: #297B95;
+  --MUE-light-blue: #838FBB;
+  --MUE-white: #FAF9F6;
+  --MUE-black: #0B1215;
+  --MUE-yellow: #FFD629;
+  --MUE-yellow-hover: #967D13;
+  --MUE-pink: #EB7BBE;
+  --MUE-footer-blue: #0D1B50;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,8 +34,15 @@
   }
 }
 
-.bg-mue {
-  background-color: #000F46;
+.timeline-date-style-MUE-sky-blue {
+  color: var(--MUE-sky-blue);
+  font-weight: 800 !important;
 }
-
-
+.timeline-date-style-MUE-yellow {
+  color: var(--MUE-yellow);
+  font-weight: 800 !important;
+}
+.timeline-date-style-MUE-pink {
+  color: var(--MUE-pink);
+  font-weight: 800 !important;
+}

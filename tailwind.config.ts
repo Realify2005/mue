@@ -24,17 +24,24 @@ const config: Config = {
       },
       fontFamily: {
         audiowide: ['Audiowide', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
         'MUE-dark-blue': '#000F46',
         'MUE-sky-blue': '#46C8F0',
         'MUE-sky-blue-hover': '#3CAACB',
+        'MUE-ocean-blue': '#297B95',
         'MUE-light-blue': '#838FBB',
         'MUE-white': '#FAF9F6',
         'MUE-black': '#0B1215',
         'MUE-yellow': '#FFD629',
         'MUE-yellow-hover': '#967D13',
+        'MUE-pink': '#EB7BBE',
         'MUE-footer-blue': '#0D1B50',
+      },
+      rotate: {
+        '15': '15deg',
+        '-15': '-15deg',
       }
     },
   },

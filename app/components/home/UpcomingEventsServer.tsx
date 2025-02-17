@@ -22,7 +22,7 @@ const UpcomingEventsServer = async () => {
 
   // Mark the first event as the next upcoming event
   if (events.length > 0) {
-    events[0].isNext = true;
+    events[events.length - 1].isNext = true;
   }
 
   return <UpcomingEvents events={events} />;

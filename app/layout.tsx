@@ -47,8 +47,9 @@ export default function RootLayout({
             "description": "Your home of Esports and Gaming at Unimelb!"
           })}
         </script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"></link>
       </Head>
-      <body className={`${inter.className} bg-mue`}>
+      <body className={`${inter.className} bg-MUE-dark-blue`}>
         {children}
         <Analytics/>
       </body>
