@@ -17,11 +17,11 @@ const AboutCommittee: React.FC = async () => {
   const filteredMembers = members.filter(member => displayedRoles.includes(member.role));
 
   // Sort the filteredMembers array based on the order of roles in displayedRoles
-  const sortedMembers = filteredMembers.sort((a, b) => {
-    return displayedRoles.indexOf(a.role) - displayedRoles.indexOf(b.role);
-  });
+  //const sortedMembers = filteredMembers.sort((a, b) => {
+  //  return displayedRoles.indexOf(a.role) - displayedRoles.indexOf(b.role);
+  //});
 
-  return <CommitteeMembers members={sortedMembers} />;
+  return <CommitteeMembers members={filteredMembers} />;
 };
 
 export default AboutCommittee;
