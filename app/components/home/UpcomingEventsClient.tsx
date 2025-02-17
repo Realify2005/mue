@@ -17,6 +17,11 @@ interface Event {
 const UpcomingEvents = ({ events }: { events: Event[] }) => {
   const [paused, setPaused] = useState(false);
   const animation = useAnimation();
+  
+  // Mark the first event as the next upcoming event
+  if (events.length > 0) {
+    events[events.length - 1].isNext = true;
+  }
 
   const startAnimation = () => {
     animation.start({
