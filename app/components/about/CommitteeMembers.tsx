@@ -9,7 +9,25 @@ interface CommitteeMembersProps {
   members: CommitteeMember[];
 }
 
+const displayedRoles = [
+  "President",
+  "Vice President",
+  "Secretary",
+  "Treasurer",
+  "Head of Technical",
+  "Head of Publicity",
+  "Head of Events"
+];
+
 const CommitteeMembers: React.FC<CommitteeMembersProps> = ({ members }) => {
+
+  const filteredMembers = members.filter(member => displayedRoles.includes(member.role));
+
+  // Sort the filteredMembers array based on the order of roles in displayedRoles
+  const sortedMembers = filteredMembers.sort((a, b) => {
+    return displayedRoles.indexOf(a.role) - displayedRoles.indexOf(b.role);
+  });
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -23,7 +41,7 @@ const CommitteeMembers: React.FC<CommitteeMembersProps> = ({ members }) => {
       
       { /* First row (4 members) */ }
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 max-w-5xl">
-        {members.slice(0, 4).map((member, index) => (
+        {sortedMembers.slice(0, 4).map((member, index) => (
           <motion.div
             key={index}
             className="flex flex-col items-center text-center space-y-4"
@@ -48,7 +66,7 @@ const CommitteeMembers: React.FC<CommitteeMembersProps> = ({ members }) => {
       
       { /* Second row (3 members) */ }
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-20 max-w-5xl mt-8">
-        {members.slice(4).map((member, index) => (
+        {sortedMembers.slice(4).map((member, index) => (
           <motion.div
             key={index}
             className="flex flex-col items-center text-center space-y-4"
