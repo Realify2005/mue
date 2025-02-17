@@ -6,10 +6,10 @@ const AboutHeroSection: React.FC = () => {
         <div className="relative bg-MUE-dark-blue text-MUE-white py-4 md:py-24 lg:py-36 mb-40 px-8 lg:px-4 w-full grid grid-cols-1 lg:grid-cols-8 gap-8 lg:gap-16">
             <div className="lg:col-span-5 flex flex-col justify-center lg:ml-28">
                 <h5 className="text-lg md:text-xl uppercase font-semibold">What We Do</h5>
-                <h1 className="text-4xl md:text-[84px] py-4 mr-8 font-extrabold leading-tight">
+                <h1 className="text-4xl py-4 mr-8 md:text-[84px] xl-about-hero-section:mr-28 2xl-about-hero-section:mr-8 font-extrabold leading-tight">
                     Uniting Gamers, <br /> Elevating Esports<span className="text-MUE-sky-blue">.</span>
                 </h1>
-                <h3 className="text-2xl md:text-5xl mt-8 lg:mt-12 mr-8 font-bold">How Two Communities Came Together</h3>
+                <h3 className="text-2xl mr-8 md:text-5xl xl-about-hero-section:mr-28 2xl-about-hero-section:mr-8 mt-8 lg:mt-12 font-bold">How Two Communities Came Together</h3>
             </div>
             <div className="relative lg:col-span-3 flex flex-col space-y-4 items-center lg:items-start">
                 <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">

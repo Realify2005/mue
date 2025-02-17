@@ -42,6 +42,10 @@ const config: Config = {
       rotate: {
         '15': '15deg',
         '-15': '-15deg',
+      },
+      screens: {
+        'xl-about-hero-section': '1160px',
+        '2xl-about-hero-section': '1600px',
       }
     },
   },
