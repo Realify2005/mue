@@ -21,7 +21,7 @@ const TeamDisplay: React.FC<{ game: string, team: string, display: string}> = as
                 return <div className='bg-gray-500 flex space-x-4 p-1' key={player.name}>
                     <p className='min-w-[150px]'>{player.name}</p>
                     <p className='min-w-[100px]'>{player.role}</p>
-                    <Image src={player.logo} alt="img" width={50} height={50}/>
+                    {player?.logo && <Image src={player.logo} alt="img" width={50} height={50}/>}
                 </div>
             })}
         </div>
