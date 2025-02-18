@@ -1,24 +1,40 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import LandingSection from './components/home/LandingSection'
-import GetInTouch from './components/home/GetInTouch'
 import Footer from './components/Footer'
-import WelcometoMUE from './components/home/WelcometoMUE'
-import AboutMUE from './components/home/AboutMUE'
-import OurDiscord from './components/home/OurDiscord'
+import ClubHighlights from './components/home/ClubHighlights'
+import GetInTouch from './components/home/GetInTouch'
+import HeroSection from './components/home/HeroSection'
+import Sponsors from './components/home/Sponsors'
+import UpcomingEventsServer from './components/home/UpcomingEventsServer'
 
 const Home: React.FC = () => {
+
   return (
     <>
-      <Navbar />
-      <LandingSection />
-      <WelcometoMUE />
-      <div className="grid grid-cols-1 grid-flow-row">
-        <AboutMUE />
-        <OurDiscord />
+      {/* Light Blue Glowing Light Effect */}
+      <div
+        className="
+          absolute
+          top-[-140px] left-[-100px]
+          lg:top-[-200px] lg:left-[-200px]
+          z-30
+          w-[320px] h-[320px]
+          lg:w-[520px] lg:h-[520px]
+          rounded-full
+          bg-[radial-gradient(circle,rgba(173,216,230,0.5)_0%,rgba(0,17,77,0)_70%)]
+          pointer-events-none
+        "
+      />
+
+      <div className="flex flex-col justify-center items-center">
+        <Navbar />
+        <HeroSection />
+        <Sponsors />
+        <ClubHighlights />
+        <UpcomingEventsServer />
         <GetInTouch />
+        <Footer />
       </div>
-      <Footer />
     </>
   )
 }

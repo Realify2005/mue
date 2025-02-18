@@ -28,15 +28,15 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
     hour12: true
   });
 
-  const tagColors: { [key: string]: string } = {
-    "📅 Weeklies": 'bg-pink-200',
-    "🏆 Tournament": 'bg-yellow-200',
-    "🌏 Collab": 'bg-purple-200',
-    "📚 Trivia": 'bg-green-200',
-    "❄️ Winterfest": "bg-blue-200",
-    "✨ Special": "bg-orange-100"
-    // add more tag-to-color mappings as needed
-  };
+const tagColors: { [key: string]: string } = {
+  "📅 Weeklies": 'bg-pink-200',
+  "🏆 Tournament": 'bg-yellow-200',
+  "🌏 Collab": 'bg-purple-200',
+  "📚 Trivia": 'bg-green-200',
+  "❄️ Winterfest": "bg-blue-200",
+  "✨ Special": "bg-orange-100"
+  // add more tag-to-color mappings as needed
+};
 
   return (
     <div className="border rounded-lg p-4 shadow-md w-full max-w-md my-2 bg-white">

@@ -1,8 +1,10 @@
 import React, { Suspense } from 'react';
+import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { fetchCommitteeInfo } from '../components/api/fetchCommitteeInfo';
 import CommitteeSkeleton from '../components/committee/CommitteeSkeleton';
+
 
 export const metadata = {
   title: 'Our Committee | MUE',
@@ -76,9 +78,11 @@ const CommitteePage: React.FC = async () => {
                     key={member.name}
                     className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
                   >
-                    <img
+                    <Image
                       src={member.image}
                       alt={member.name}
+                      height={128}
+                      width={128}
                       className="w-32 h-32 rounded-full mb-4"
                     />
                     <h4 className="text-xl font-semibold">{member.name}</h4>
