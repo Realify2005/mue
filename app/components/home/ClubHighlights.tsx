@@ -72,10 +72,23 @@ const ClubHighlights: React.FC = () => {
 
 const HighlightSection: React.FC<{ section: SectionType; index: number }> = ({ section, index }) => {
   const [scrollOpacity, setScrollOpacity] = useState(0);
+  const [isMdScreen, setIsMdScreen] = useState(false);
   const imageRef = React.useRef<HTMLDivElement>(null);
 
   const { ref } = useInView({ triggerOnce: true, threshold: 1 });
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMdScreen(window.innerWidth >= 768);
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -154,33 +167,35 @@ const HighlightSection: React.FC<{ section: SectionType; index: number }> = ({ s
         </div>
       </div>
       {/* Sticky Image Section */}
-      <div className="fixed top-1/2 left-[55%] transform -translate-y-1/2 hidden md:block">
-        <div
-          style={{
-            opacity: scrollOpacity,
-            transition: "opacity 0.2s ease-in-out", // Smooth fade effect
-          }}
-        >
-          {index === 0 ? (
-            <iframe
-              className="rounded-3xl shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
-              src="https://discord.com/widget?id=483256492762595328&theme=dark"
-              width="550"
-              height="400"
-              frameBorder="0"
-              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            ></iframe>
-          ) : (
-            <Image
-              src={section.image}
-              alt={section.category}
-              width={550}
-              height={400}
-              className="rounded-3xl shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
-            />
-          )}
+      {isMdScreen && (
+        <div className="fixed top-1/2 left-[55%] transform -translate-y-1/2">
+          <div
+            style={{
+              opacity: scrollOpacity,
+              transition: "opacity 0.2s ease-in-out", // Smooth fade effect
+            }}
+          >
+            {index === 0 ? (
+              <iframe
+                className="rounded-3xl shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
+                src="https://discord.com/widget?id=483256492762595328&theme=dark"
+                width="550"
+                height="400"
+                frameBorder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+              ></iframe>
+            ) : (
+              <Image
+                src={section.image}
+                alt={section.category}
+                width={550}
+                height={400}
+                className="rounded-3xl shadow-[0_0_20px_theme(colors.MUE-sky-blue)]"
+              />
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
