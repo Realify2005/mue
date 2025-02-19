@@ -80,7 +80,7 @@ const FrequentlyAskedQuestions: React.FC = () => {
     <div className="bg-MUE-dark-blue text-white py-10">
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
-        <h1 className="text-5xl font-medium mb-8 font-montserrat">FAQ</h1>
+        <h1 className="text-5xl font-bold mb-8 font-montserrat">FAQ</h1>
 
         {/* Main Container (Grid) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -103,7 +103,7 @@ const FrequentlyAskedQuestions: React.FC = () => {
                   </span>
                 </button>
                 {activeIndex === index && (
-                  <div className="bg-MUE-black px-4 py-3 text-left">
+                  <div className="px-8 pb-4 text-left">
                     <p className="text-sm">{item.answer}</p>
                   </div>
                 )}

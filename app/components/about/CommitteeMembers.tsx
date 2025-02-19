@@ -19,8 +19,6 @@ const displayedRoles = [
   "Head of Events"
 ];
 
-export const revalidate = 0;
-
 const CommitteeMembers: React.FC<CommitteeMembersProps> = ({ members }) => {
 
   const filteredMembers = members.filter(member => displayedRoles.includes(member.role));

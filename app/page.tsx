@@ -12,19 +12,19 @@ const Home: React.FC = () => {
   return (
     <>
       {/* Light Blue Glowing Light Effect */}
-      <div
+      {/*<div
         className="
           absolute
           top-[-140px] left-[-100px]
           lg:top-[-200px] lg:left-[-200px]
-          z-30
+          z-10
           w-[320px] h-[320px]
           lg:w-[520px] lg:h-[520px]
           rounded-full
           bg-[radial-gradient(circle,rgba(173,216,230,0.5)_0%,rgba(0,17,77,0)_70%)]
           pointer-events-none
         "
-      />
+      />*/}
 
       <div className="flex flex-col justify-center items-center">
         <Navbar />

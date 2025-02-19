@@ -1,14 +1,16 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import '@fontsource/audiowide';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative w-full bg-MUE-dark-blue overflow-hidden px-8 lg:px-40 pt-24 pb-36 flex items-center">
+    <section className="relative w-full md:h-screen bg-MUE-dark-blue overflow-hidden px-8 lg:px-40 pt-24 pb-36 flex items-center bg-cover bg-center bg-[url('/photos/gic2024_photo_5.jpg')]">
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-MUE-dark-blue"></div>
 
       {/* Yellow Sphere */}
-      <div
+      {/*<div
         className="
           absolute
           bottom-[-250px] left-1/2
@@ -18,10 +20,10 @@ const HeroSection: React.FC = () => {
           rounded-t-full
           pointer-events-none
         "
-      />
+      />*/}
 
       {/* Yellow Lines */}
-      <svg
+      {/*<svg
         width="893.5"
         height="157.5"
         viewBox="0 0 810 164"
@@ -34,12 +36,12 @@ const HeroSection: React.FC = () => {
           stroke="var(--MUE-Yellow, #FFD629)"
           strokeWidth="6"
         />
-      </svg>
+      </svg>*/}
 
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full items-center">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 w-full items-center">
         {/* Left: Content */}
-        <div className="relative z-10 text-white">
+        <div className="text-white">
           <p className="text-MUE-yellow font-inter text-xl font-medium tracking-[6px] uppercase">
             Welcome to MUE
           </p>
@@ -68,17 +70,6 @@ const HeroSection: React.FC = () => {
               OUR DISCORD
             </Link>
           </div>
-        </div>
-
-        {/* Right: Image */}
-        <div className="relative flex justify-center">
-          <Image
-            src="/photos/gic2024_photo_3.jpg"
-            alt="Gamer Illustration"
-            width={500}
-            height={500}
-            className="w-full drop-shadow-lg"
-          />
         </div>
       </div>
     </section>

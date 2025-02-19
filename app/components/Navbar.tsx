@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
     <div className="relative navbar bg-MUE-dark-blue px-4 lg:px-24 py-4 text-MUE-light-blue shadow-md shadow-black sticky top-0 w-full z-20">
 
       {/* Yellow Lines */}
-      <svg
+      {/*<svg
         width="656"
         height="163"
         viewBox="0 0 656 163"
@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
           stroke="var(--MUE-Yellow, #FFD629)"
           strokeWidth="6"
         />
-      </svg>
+      </svg>*/}
 
       <div className="navbar-start">
         <div className="dropdown">
