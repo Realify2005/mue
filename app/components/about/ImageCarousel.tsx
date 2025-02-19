@@ -1,6 +1,6 @@
 'use client';
-
 import React from 'react';
+import Image from 'next/image';
 
 // Temporary images, will hopefully integrate with Notion in the future
 const slides = [
@@ -38,9 +38,11 @@ const InfinityScrollCarousel: React.FC = () => {
         >
           {allSlides.map((slide, index) => (
             <div key={index} className="flex-none px-4">
-              <img
+              <Image
                 src={slide}
                 alt={`Slide ${index}`}
+                width={600}
+                height={400}
                 className="w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] h-auto object-cover rounded-md shadow-md"
               />
             </div>
