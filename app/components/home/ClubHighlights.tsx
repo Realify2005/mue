@@ -154,7 +154,7 @@ const HighlightSection: React.FC<{ section: SectionType; index: number }> = ({ s
         </div>
       </div>
       {/* Sticky Image Section */}
-      <div className="fixed top-1/2 left-[55%] transform -translate-y-1/2">
+      <div className="fixed top-1/2 left-[55%] transform -translate-y-1/2 hidden md:block">
         <div
           style={{
             opacity: scrollOpacity,
