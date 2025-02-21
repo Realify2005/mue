@@ -6,10 +6,13 @@ import AboutHeroSection from '../components/about/AboutHeroSection';
 import Timeline from '../components/about/Timeline';
 import ImageCarousel from '../components/about/ImageCarousel';
 import FrequentlyAskedQuestions from '../components/about/FrequentlyAskedQuestions';
+import { fetchPhotos } from '../components/api/fetchGalleryPhoto';
 
 export const revalidate = 0;
 
-const AboutPage: React.FC = () => {
+const AboutPage: React.FC = async () => {
+  const gallery_data = await fetchPhotos();
+  console.log(gallery_data);
   return (
     <>
       <Navbar />
