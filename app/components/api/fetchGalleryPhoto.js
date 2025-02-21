@@ -15,10 +15,13 @@ export async function fetchPhotos() {
     });
 
     const indexedData = response.results.map(page => {
-        return {
-            photo: page.properties.Photos
-        }
+        return page.properties.Photos.files
     });
-    return indexedData;
+
+    const photos = []
+    indexedData.forEach(photo_list => {
+        photo_list.forEach(photo => photos.push(photo.file.url))
+    })
+    return photos;
 }
 

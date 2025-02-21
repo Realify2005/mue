@@ -11,8 +11,7 @@ import { fetchPhotos } from '../components/api/fetchGalleryPhoto';
 export const revalidate = 0;
 
 const AboutPage: React.FC = async () => {
-  const gallery_data = await fetchPhotos();
-  console.log(gallery_data);
+  const photos = await fetchPhotos();
   return (
     <>
       <Navbar />
@@ -20,7 +19,7 @@ const AboutPage: React.FC = async () => {
       <AboutHeroSection />
       <Timeline />
       <AboutCommittee />
-      <ImageCarousel />
+      <ImageCarousel slides={photos}/>
       <FrequentlyAskedQuestions />
 
       <Footer />
