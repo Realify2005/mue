@@ -7,8 +7,10 @@ import HeroSection from './components/home/HeroSection'
 import Sponsors from './components/home/Sponsors'
 import UpcomingEventsServer from './components/home/UpcomingEventsServer'
 
-const Home: React.FC = () => {
+export const revalidate = 0;
 
+const Home: React.FC = () => {
+  
   return (
     <>
       {/* Light Blue Glowing Light Effect */}
