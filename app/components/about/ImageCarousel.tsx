@@ -1,17 +1,22 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import { fetchPhotos } from '../api/fetchGalleryPhoto';
+
+interface SlidesProps {
+  slides: any[];
+}
 
 // Temporary images, will hopefully integrate with Notion in the future
-const slides = [
-  '/photos/agm2024_photo_1.jpg',
-  '/photos/agm2024_photo_2.jpg',
-  '/photos/agm2024_photo_3.jpg',
-  '/photos/agm2024_photo_4.jpg',
-  '/photos/agm2024_photo_5.jpg',
-];
+// const slides = [
+//   '/photos/agm2024_photo_1.jpg',
+//   '/photos/agm2024_photo_2.jpg',
+//   '/photos/agm2024_photo_3.jpg',
+//   '/photos/agm2024_photo_4.jpg',
+//   '/photos/agm2024_photo_5.jpg',
+// ];
 
-const InfinityScrollCarousel: React.FC = () => {
+const InfinityScrollCarousel: React.FC<SlidesProps> = ({ slides }) => {
   // Duplicate the slides to create a seamless loop
   const allSlides = Array(100).fill(slides).flat();
 
