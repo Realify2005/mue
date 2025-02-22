@@ -126,6 +126,8 @@ const HighlightSection: React.FC<{ section: SectionType; index: number }> = ({ s
         </span>
         <h2 className="text-4xl font-bold my-4">{section.title}</h2>
         
+        {/* Mobile images located in-between section title and description */}
+
         <div className="flex justify-center block md:hidden py-6" ref={imageRef}>
           {index === 0 ? (
             <iframe
@@ -166,7 +168,7 @@ const HighlightSection: React.FC<{ section: SectionType; index: number }> = ({ s
           ))}
         </div>
       </div>
-      {/* Sticky Image Section */}
+      {/* Desktop right side images */}
       {isMdScreen && (
         <div className="fixed top-1/2 left-[55%] transform -translate-y-1/2">
           <div

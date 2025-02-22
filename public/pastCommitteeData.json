@@ -1,0 +1,187 @@
+{
+    "2023": [
+        {
+            "name": "Sama Koheil",
+            "role": "President",
+            "image": "/headshots/sama_koheil.jpg"
+        },
+        {
+            "name": "Kevin Chan",
+            "role": "Vice President",
+            "image": "/headshots/kevin_chan.jpg"
+        },
+        {
+            "name": "Vincent Lu",
+            "role": "Secretary",
+            "image": "/headshots/vincent_lu.jpg"
+        },
+        {
+            "name": "Berke Seven",
+            "role": "Treasurer",
+            "image": "/headshots/berke_seven.jpg"
+        },
+        {
+            "name": "Louis Nowell Nicole",
+            "role": "Head of Technical",
+            "image": "/headshots/louis_nowell_nicole.jpg"
+        },
+        {
+            "name": "Yvonne Chen",
+            "role": "Head of Publicity",
+            "image": "/headshots/yvonne_chen.jpg"
+        },
+        {
+            "name": "Fidel Hendrata",
+            "role": "Head of Events",
+            "image": "/headshots/fidel_hendrata.jpg"
+        }
+    ],
+    "2022": [
+        {
+            "name": "Wara Asahara",
+            "role": "President",
+            "image": "/headshots/wara_asahara.jpg"
+        },
+        {
+            "name": "Louis Nowell Nicole",
+            "role": "Vice President",
+            "image": "/headshots/louis_nowell_nicole.jpg"
+        },
+        {
+            "name": "Conor Siryj",
+            "role": "Secretary",
+            "image": "/headshots/conor_siryj.jpg"
+        },
+        {
+            "name": "Berke Seven",
+            "role": "Treasurer",
+            "image": "/headshots/berke_seven.jpg"
+        },
+        {
+            "name": "Aden Michael McCusker",
+            "role": "Head of Technical",
+            "image": "/headshots/aden_michael_mccusker.jpg"
+        },
+        {
+            "name": "Celine Lau",
+            "role": "Head of Publicity",
+            "image": "/headshots/celine_lau.jpg"
+        },
+        {
+            "name": "Sama Koheil",
+            "role": "Head of Events",
+            "image": "/headshots/sama_koheil.jpg"
+        }
+    ],
+    "2021": [
+        {
+            "name": "Eric Lu",
+            "role": "President",
+            "image": "/headshots/eric_lu.jpg"
+        },
+        {
+            "name": "Matthew Cook",
+            "role": "Vice President",
+            "image": "/headshots/matthew_cook.jpg"
+        },
+        {
+            "name": "Conor Siryj",
+            "role": "Secretary",
+            "image": "/headshots/conor_siryj.jpg"
+        },
+        {
+            "name": "Berke Seven",
+            "role": "Treasurer",
+            "image": "/headshots/berke_seven.jpg"
+        },
+        {
+            "name": "Louis Nowell Nicole",
+            "role": "Head of Technical",
+            "image": "/headshots/louis_nowell_nicole.jpg"
+        },
+        {
+            "name": "Celine Lau",
+            "role": "Head of Publicity",
+            "image": "/headshots/celine_lau.jpg"
+        },
+        {
+            "name": "Anh Vo",
+            "role": "Head of Events",
+            "image": "/headshots/anh_vo.jpg"
+        }
+    ],
+    "2020": [
+        {
+            "name": "Zhi Charles",
+            "role": "President",
+            "image": "/headshots/zhi_charles.jpg"
+        },
+        {
+            "name": "Vignesh Krishnan",
+            "role": "Vice President",
+            "image": "/headshots/vignesh_krishnan.jpg"
+        },
+        {
+            "name": "Nishank Ji-Sung Jain",
+            "role": "Secretary",
+            "image": "/headshots/nishank_jisung_jain.jpg"
+        },
+        {
+            "name": "Jeraldine Liau",
+            "role": "Treasurer",
+            "image": "/headshots/jeraldine_liau.jpg"
+        },
+        {
+            "name": "Louis Nowell Nicole",
+            "role": "Head of Technical",
+            "image": "/headshots/louis_nowell_nicole.jpg"
+        },
+        {
+            "name": "Celine Lau",
+            "role": "Head of Publicity",
+            "image": "/headshots/celine_lau.jpg"
+        },
+        {
+            "name": "Anh Vo",
+            "role": "Head of Events",
+            "image": "/headshots/anh_vo.jpg"
+        }
+    ],
+    "2019": [
+        {
+            "name": "Chen Yi",
+            "role": "President",
+            "image": "/headshots/chen_yi.jpg"
+        },
+        {
+            "name": "Zhi Charles Teoh",
+            "role": "Vice President",
+            "image": "/headshots/zhi_charles_teoh.jpg"
+        },
+        {
+            "name": "Yawen Li",
+            "role": "Secretary",
+            "image": "/headshots/yawen_li.jpg"
+        },
+        {
+            "name": "Zurong Wu",
+            "role": "Treasurer",
+            "image": "/headshots/zurong_wu.jpg"
+        },
+        {
+            "name": "Kharil Azran",
+            "role": "Head of Technical",
+            "image": "/headshots/kharil_azran.jpg"
+        },
+        {
+            "name": "Camilla Feng",
+            "role": "Head of Publicity",
+            "image": "/headshots/camilla_feng.jpg"
+        },
+        {
+            "name": "Yuen Sze Chow",
+            "role": "Head of Events",
+            "image": "/headshots/yuen_sze_chow.jpg"
+        }
+    ]
+}

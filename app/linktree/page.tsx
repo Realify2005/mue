@@ -4,11 +4,29 @@ import Footer from '../components/Footer';
 import Image from 'next/image';
 import LinktreeBar from '../components/LinktreeBar';
 
+export const metadata = {
+  title: 'Linktree | MUE',
+  description: 'Melbourne University Esports Linktree!',
+  openGraph: {
+    title: 'Linktree | MUE',
+    description: 'Melbourne University Esports Linktree!',
+    url: '/games',
+    siteName: 'Melbourne University Esports',
+    locale: 'en_AU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Linktree | MUE",
+    description: 'Melbourne University Esports Linktree!',
+  },
+}
+
 const LinkPage = () => {
   return (
     <>
       <Navbar />
-      <div className="mt-16 px-2 py-8 lg:px-40 flex flex-col justify-center items-center bg-gradient-to-b from-teal-500 to-blue-500">
+      <div className="px-2 py-8 lg:px-40 flex flex-col justify-center items-center bg-gradient-to-b from-teal-500 to-blue-500">
         <Image className="rounded-full" src="/logos/MUE_no_words.webp" width={75} height={75} alt="muelogo" />
 
         <div className="mt-6 flex flex-col justify-center items-center">
