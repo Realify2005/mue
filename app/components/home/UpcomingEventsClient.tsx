@@ -21,7 +21,7 @@ const UpcomingEvents = ({ events }: { events: Event[] }) => {
   
   // Mark the first event as the next upcoming event
   if (events.length > 0) {
-    events[events.length - 1].isNext = true;
+    events[0].isNext = true;
   }
 
   const startAnimation = () => {

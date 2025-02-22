@@ -5,5 +5,5 @@ export interface CommitteeMember {
     role: string;
     about: string;
     discord: string;
-  }
+}
   

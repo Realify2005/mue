@@ -49,8 +49,10 @@ const Navbar: React.FC = () => {
                 <a className="hover:text-MUE-yellow">About</a>
                 <ul className="p-2">
                   <li className="hover:text-MUE-yellow"><Link href='/'>Welcome Page</Link></li>
+                  <li className="hover:text-MUE-yellow"><Link href='/about'>About Us</Link></li>
                   <li className="hover:text-MUE-yellow"><Link href='/linktree'>Linktree</Link></li>
                   <li className="hover:text-MUE-yellow"><Link href='/committee'>Committee</Link></li>
+                  <li className="hover:text-MUE-yellow"><Link href='/past-committee'>Past Committee</Link></li>
                   <li className="hover:text-MUE-yellow"><Link href='/membership'>Membership</Link></li>
                 </ul>
               </li>
@@ -77,11 +79,13 @@ const Navbar: React.FC = () => {
               <div tabIndex={0} role="button" className="flex justify-center items-center hover:text-MUE-yellow">
                 ABOUT <ChevronRight size={15}/>
               </div>
-              <ul tabIndex={0} className="dropdown-content menu bg-MUE-dark-blue rounded-box mt-56 z-1 w-52 p-2 shadow-sm">
+              <ul tabIndex={0} className="dropdown-content menu bg-MUE-dark-blue rounded-box mt-72 z-1 w-52 p-2 shadow-sm">
                 {/* When changing the number of links in dropdown, please change the top margin of parent dropdown (mt) */}
                 <li className="hover:text-MUE-yellow"><Link href='/'>Welcome Page</Link></li>
+                <li className="hover:text-MUE-yellow"><Link href='/about'>About Us</Link></li>
                 <li className="hover:text-MUE-yellow"><Link href='/linktree'>Linktree</Link></li>
                 <li className="hover:text-MUE-yellow"><Link href='/committee'>Committee</Link></li>
+                <li className="hover:text-MUE-yellow"><Link href='/past-committee'>Past Committee</Link></li>
                 <li className="hover:text-MUE-yellow"><Link href='/membership'>Membership</Link></li>
               </ul>
             </div>

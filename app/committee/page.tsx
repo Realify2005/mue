@@ -51,7 +51,7 @@ const CommitteePage: React.FC = async () => {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="mt-12 px-5 py-24 md:px-80 flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('../public/background/committee_bg_1.jpg')]">
+      <div className="px-5 py-24 md:px-80 flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('../public/background/committee_bg_1.jpg')]">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="my-12 text-3xl font-semibold text-white bg-black inline-block">
             2024-25 Committee
@@ -68,7 +68,7 @@ const CommitteePage: React.FC = async () => {
           { title: 'Publicity Department', data: publicity, bg: 'bg-white' },
           { title: 'Game/Esports Department', data: games, bg: 'bg-gray-100' },
         ].map((section) => (
-          <div key={section.title} className={`py-12 px-5 md:px-32 ${section.bg}`}>
+          <div key={section.title} className={`text-MUE-black py-12 px-5 md:px-32 ${section.bg}`}>
             <h3 className="text-4xl font-semibold text-center mb-8">{section.title}</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {section.data.map((member: any) => {
