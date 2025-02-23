@@ -47,6 +47,12 @@ const CasualGames: React.FC = () => {
           height={275}
         />
         <Image
+          src="/logos/games/marvel_rivals.png"
+          alt="marvel rivals logo"
+          width={275}
+          height={275}
+        />
+        <Image
           src="/logos/games/osu.png"
           alt="osu logo"
           width={275}
