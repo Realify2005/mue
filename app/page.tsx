@@ -5,7 +5,7 @@ import ClubHighlights from './components/home/ClubHighlights'
 import GetInTouch from './components/home/GetInTouch'
 import HeroSection from './components/home/HeroSection'
 import Sponsors from './components/home/Sponsors'
-import UpcomingEventsServer from './components/home/UpcomingEventsServer'
+import UpcomingEvents from './components/home/UpcomingEvents'
 
 export const revalidate = 0;
 
@@ -31,10 +31,12 @@ const Home: React.FC = () => {
       <div className="flex flex-col justify-center items-center">
         <Navbar />
         <HeroSection />
-        <Sponsors />
+        <UpcomingEvents />
         <ClubHighlights />
-        <UpcomingEventsServer />
-        <GetInTouch />
+        <div className="bg-MUE-home-section-alt-bg-color">
+          <GetInTouch />
+          <Sponsors />
+        </div>
         <Footer />
       </div>
     </>

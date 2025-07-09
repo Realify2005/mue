@@ -1,79 +1,84 @@
-import React from "react";
-import Link from "next/link";
-import '@fontsource/audiowide';
+'use client'
+import React from 'react'
+import Link from 'next/link'
+import '@fontsource/audiowide'
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative w-full md:h-screen bg-MUE-dark-blue overflow-hidden px-8 lg:px-40 pt-24 pb-36 flex items-center bg-cover bg-center bg-[url('/photos/gic2024_photo_5.jpg')]">
+    <section
+      className="
+        relative w-full md:h-screen bg-MUE-dark-blue
+        overflow-hidden px-8 lg:px-40 pt-24 pb-36
+        flex items-center bg-cover bg-center
+        bg-[url('/photos/gic2024_photo_5.jpg')]
+      "
+    >
+      {/* gradient fade */}
+      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-MUE-dark-blue" />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-MUE-dark-blue"></div>
-
-      {/* Yellow Sphere */}
-      {/*<div
-        className="
-          absolute
-          bottom-[-250px] left-1/2
-          transform -translate-x-1/2
-          w-[400px] h-[500px]
-          bg-[radial-gradient(circle,rgba(255,206,86,0.8)_0%,rgba(0,17,77,0)_70%)]
-          rounded-t-full
-          pointer-events-none
-        "
-      />*/}
-
-      {/* Yellow Lines */}
-      {/*<svg
-        width="893.5"
-        height="157.5"
-        viewBox="0 0 810 164"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="hidden lg:block absolute bottom-0 left-[-40px] flex-shrink-0 pointer-events-none"
-      >
-        <path
-          d="M-92 3H47.3064L100.375 54H685.241L801.5 160.5H-20"
-          stroke="var(--MUE-Yellow, #FFD629)"
-          strokeWidth="6"
-        />
-      </svg>*/}
-
-      {/* Grid Layout */}
+      {/* content grid */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 w-full items-center">
-        {/* Left: Content */}
+        {/* left text */}
         <div className="text-white">
-          <p className="text-MUE-yellow font-inter text-xl font-medium tracking-[6px] uppercase">
-            Welcome to MUE
-          </p>
-          <h1 className="text-5xl lg:text-[80px] font-audiowide font-normal leading-[123%] mt-2 capitalize">
-            Melbourne&apos;s Biggest <br />
-            <span className="text-MUE-sky-blue">Gaming Club</span>
+          <h1 className="font-montserrat font-bold leading-tight text-4xl sm:text-5xl lg:text-[64px]">
+            <span
+              className="
+                block
+                mb-4
+                bg-clip-text text-transparent
+                bg-[linear-gradient(to_right,#46C8F0_0%,#EB7BBE_40%,#FED729_80%)]
+              "
+            >
+              The Heart Of
+            </span>
+            <span
+              className="
+                block
+                bg-clip-text text-transparent
+                bg-[linear-gradient(to_right,#46C8F0_0%,#EB7BBE_40%,#FED729_80%)] pb-2
+              "
+            >
+              University Gaming
+            </span>
           </h1>
-          <p className="mt-4 text-lg md:text-xl">
-            Become a part of the Unimelb Spirit in Esports
+
+          <p className="font-montserrat font-bold mt-4 text-lg md:text-xl pb-4">
+            Join Melbourne&apos;s Largest Gaming Club
           </p>
 
-          {/* Buttons */}
           <div className="mt-6 flex flex-wrap gap-4">
             <Link
               href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6725/"
               target="_blank"
-              className="bg-MUE-yellow text-MUE-black font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-MUE-yellow-hover transition flex items-center gap-2"
+              className="
+                bg-MUE-sky-blue hover:bg-MUE-sky-blue-hover
+                text-white font-bold py-3 px-6 rounded-full
+                transition flex items-center gap-2 text-MUE-dark-dark-blue-content
+              "
             >
-              JOIN NOW <span className="text-xl">&#x276F;</span>
+              BECOME A MEMBER <span className="text-xl">&#x276F;</span>
             </Link>
+
             <Link
               href="https://discord.gg/NHAFvPqTDt"
               target="_blank"
-              className="border-2 border-MUE-yellow hover:border-MUE-yellow-hover text-MUE-yellow font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-MUE-yellow-hover hover:text-MUE-black transition"
+              className="
+                border-2 border-MUE-sky-blue hover:border-MUE-sky-blue-hover
+                text-MUE-sky-blue hover:text-white
+                font-bold py-3 px-6 rounded-full
+                transition
+              "
             >
               OUR DISCORD
             </Link>
           </div>
         </div>
+
+        {/* right side stays as background-image — remove this block if you want an <img> instead */}
+        <div className="hidden md:block" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection

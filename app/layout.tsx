@@ -49,7 +49,7 @@ export default function RootLayout({
         </script>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"></link>
       </Head>
-      <body className={`${inter.className} bg-MUE-dark-blue`}>
+      <body className={`${inter.className} bg-MUE-dark-dark-blue`}>
         {children}
         <Analytics/>
       </body>

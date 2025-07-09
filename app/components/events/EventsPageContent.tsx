@@ -4,15 +4,16 @@ import React, { useState } from 'react';
 import EventCard from './EventCard';
 
 interface Event {
+  id?: number;
   affiliatedThirdParties: string;
   tags: string[];
   location: string;
   finalised: boolean;
-  date: string;
-  posterUrl: string;
-  duration: string;
   name: string;
-  externalLink?: string;
+  posterUrl: string;
+  externalLink?: string | null;
+  isNext?: boolean;
+  datetime?: string;
 }
 
 interface EventsPageContentProps {

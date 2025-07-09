@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="relative navbar bg-MUE-dark-blue px-4 lg:px-24 py-4 text-MUE-light-blue shadow-md shadow-black sticky top-0 w-full z-20">
+    <div className="relative navbar bg-MUE-dark-dark-blue px-4 lg:px-24 py-4 text-MUE-light-blue shadow-md shadow-black sticky top-0 w-full z-20">
 
       {/* Yellow Lines */}
       {/*<svg
@@ -44,9 +44,9 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu */}
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-MUE-dark-blue rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              className="menu menu-sm dropdown-content bg-MUE-dark-dark-blue rounded-box z-[1] mt-3 w-52 p-2 shadow">
               <li>
-                <a className="hover:text-MUE-yellow">About</a>
+                <a className="hover:text-MUE-yellow">About Us</a>
                 <ul className="p-2">
                   <li className="hover:text-MUE-yellow"><Link href='/'>Welcome Page</Link></li>
                   <li className="hover:text-MUE-yellow"><Link href='/about'>About Us</Link></li>
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
                 </ul>
               </li>
               <li className="hover:text-MUE-yellow"><Link href='/events'>Events</Link></li>
-              <li className="hover:text-MUE-yellow"><Link href='/games' target="_blank" rel="noopener noreferrer">Games</Link></li>
+              <li className="hover:text-MUE-yellow"><Link href='/esports' target="_blank" rel="noopener noreferrer">Esports</Link></li>
               <li className="hover:text-MUE-yellow"><Link href='https://shop.melbuniesports.com' target="_blank" rel="noopener noreferrer">Shop</Link></li>
             </ul>
           </div>
@@ -74,25 +74,78 @@ const Navbar: React.FC = () => {
       {/* Desktop Navbar Center */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
+          <li className="group">
             <div className="dropdown">
-              <div tabIndex={0} role="button" className="flex justify-center items-center hover:text-MUE-yellow">
-                ABOUT <ChevronRight size={15}/>
+              <div tabIndex={0} role="button" className="flex justify-center items-center">
+                ABOUT US <ChevronRight size={15}/>
+                <span className="absolute bottom-0 inset-x-4 h-0.5 bg-MUE-sky-blue scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300"/>
               </div>
-              <ul tabIndex={0} className="dropdown-content menu bg-MUE-dark-blue rounded-box mt-72 z-1 w-52 p-2 shadow-sm">
-                {/* When changing the number of links in dropdown, please change the top margin of parent dropdown (mt) */}
-                <li className="hover:text-MUE-yellow"><Link href='/'>Welcome Page</Link></li>
-                <li className="hover:text-MUE-yellow"><Link href='/about'>About Us</Link></li>
-                <li className="hover:text-MUE-yellow"><Link href='/linktree'>Linktree</Link></li>
-                <li className="hover:text-MUE-yellow"><Link href='/committee'>Committee</Link></li>
-                <li className="hover:text-MUE-yellow"><Link href='/past-committee'>Past Committee</Link></li>
-                <li className="hover:text-MUE-yellow"><Link href='/membership'>Membership</Link></li>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-MUE-dark-dark-blue rounded-box mt-72 z-10 w-52 p-2 shadow-sm"
+              >
+                {[
+                  /* When changing the number of links in dropdown, please change the top margin of parent dropdown (mt) */
+                  { href: '/',             label: 'Welcome Page' },
+                  { href: '/about',        label: 'About Us'      },
+                  { href: '/linktree',     label: 'Linktree'      },
+                  { href: '/committee',    label: 'Committee'     },
+                  { href: '/past-committee', label: 'Past Committee' },
+                  { href: '/membership',   label: 'Membership'    },
+                ].map(({ href, label }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className="
+                        block px-4 py-2
+                        text-MUE-light-blue
+                        transition-colors
+                        bg-no-repeat
+                        bg-[length:0%_2px]           /* start with 0% width, 2px high */
+                        hover:bg-[length:100%_2px]   /* on hover expand to full width */
+                        bg-left-bottom              /* anchor gradient at bottom-left */
+                        bg-gradient-to-r from-MUE-sky-blue to-MUE-sky-blue
+                        transition-[background-size] duration-300 ease-out
+                      "
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </li>
-          <li className="hover:text-MUE-yellow"><Link href='/events'>EVENTS</Link></li>
-          <li className="hover:text-MUE-yellow"><Link href='/games' target="_blank" rel="noopener noreferrer">GAMES</Link></li>
-          <li className="hover:text-MUE-yellow"><Link href='https://shop.melbuniesports.com' target="_blank" rel="noopener noreferrer">SHOP</Link></li>
+          <li className="group">
+            <Link
+              href="/events"
+              className="relative inline-block text-MUE-light-blue"
+            >
+              EVENTS
+              <span className="absolute bottom-0 inset-x-4 h-0.5 bg-MUE-sky-blue scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300"/>
+            </Link>
+          </li>
+          <li className="group">
+            <Link
+              href="/esports"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-block text-MUE-light-blue transition-colors"
+            >
+              ESPORTS
+              <span className="absolute bottom-0 inset-x-4 h-0.5 bg-MUE-sky-blue scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300"/>
+            </Link>
+          </li>
+          <li className="group">
+            <Link
+              href="https://shop.melbuniesports.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-block text-MUE-light-blue transition-colors"
+            >
+              SHOP
+              <span className="absolute bottom-0 inset-x-4 h-0.5 bg-MUE-sky-blue scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300"/>
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-end">
@@ -100,7 +153,7 @@ const Navbar: React.FC = () => {
           <Link
             href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6725/"
             target="_blank"
-            className="bg-MUE-yellow text-MUE-black font-bold py-2 px-4 rounded-full text-sm hover:bg-MUE-yellow-hover transition"
+            className="bg-MUE-sky-blue text-MUE-black font-bold py-2 px-4 rounded-full text-sm hover:bg-MUE-sky-blue-hover transition"
           >
             JOIN MUE &#x276F;
           </Link>

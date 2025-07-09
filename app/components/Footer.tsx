@@ -1,12 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaLinkedin, FaInstagram, FaFacebook, FaDiscord } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaFacebook, FaDiscord, FaWeixin } from 'react-icons/fa';
+import { SiXiaohongshu } from 'react-icons/si';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-MUE-footer-blue text-white lg:px-32 xl:px-60 py-8 lg:py-16 w-full">
+    <footer className="bg-MUE-dark-dark-blue text-white lg:px-32 xl:px-60 py-8 lg:py-20 w-full">
       <div className="flex flex-col items-center text-center px-4 lg:px-0">
+
+        {/* Horizontal line strip */}
+        <div className="border-t border-gray-700 w-full mb-8" />
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 xl:gap-72 text-left w-full">
           <div className="w-full lg:w-3/4">
             {/* Logo & Club Name */}
@@ -61,12 +66,26 @@ const Footer: React.FC = () => {
               className="hover:text-gray-400">
               <FaDiscord />
             </Link>
+            <Link
+              href="https://www.xiaohongshu.com/user/profile/6596163500000000220065a5?xsec_token=YBpEcQK1iZEXCOYemnmCDwWWcor8AsPuoi-5wd4TJku5M=&xsec_source=app_share&xhsshare=CopyLink&appuid=612d02b8000000002002f10e&apptime=1752048295&share_id=f353bf0c9cec4af2bd559b9ba8da44b0"
+              target="_blank"
+              className="hover:text-gray-400"
+            >
+              <SiXiaohongshu />
+            </Link>
+            <Link
+              href="https://drive.google.com/file/d/1iTUyXeirQVuk2bO7823WTNaOcQa6M-HR/view?usp=sharing"
+              target="_blank"
+              className="hover:text-gray-400"
+            >
+              <FaWeixin />
+            </Link>
           </div>
         </div>
 
         {/* Copyright */}
         <p className="text-gray-400 text-xs">
-          © Copyrights MUE 2024 All Rights Reserved
+          © Copyrights MUE 2025 All Rights Reserved
         </p>
       </div>
     </footer>

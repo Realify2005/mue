@@ -1,95 +1,91 @@
-'use client';
+// components/about/ImageCarousel.tsx
 import React from 'react';
 import Image from 'next/image';
-import { fetchPhotos } from '../api/fetchGalleryPhoto';
 
-interface SlidesProps {
-  slides: any[];
+interface ImageCarouselProps {
+  slides: string[];   // already fetched by your page
 }
 
-// Temporary images, will hopefully integrate with Notion in the future
-// const slides = [
-//   '/photos/agm2024_photo_1.jpg',
-//   '/photos/agm2024_photo_2.jpg',
-//   '/photos/agm2024_photo_3.jpg',
-//   '/photos/agm2024_photo_4.jpg',
-//   '/photos/agm2024_photo_5.jpg',
-// ];
+const shuffleArray = (arr: string[]) => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
 
-const InfinityScrollCarousel: React.FC<SlidesProps> = ({ slides }) => {
-  // Duplicate the slides to create a seamless loop
-  const allSlides = Array(100).fill(slides).flat();
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ slides }) => {
+  // pick up to 10 random slides (if >10)
+  const chosen =
+    slides.length <= 10 ? slides : shuffleArray(slides).slice(0, 10);
 
-  const slideWidthLg = 600;
-  const slideWidthMd = 400;
-  const slideWidthSm = 200;
-
-  const containerWidthLg = allSlides.length * slideWidthLg;
-  const containerWidthMd = allSlides.length * slideWidthMd;
-  const containerWidthSm = allSlides.length * slideWidthSm;
+  // destructure into exactly ten variables (undefined if fewer)
+  const [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10] = chosen;
 
   return (
-    <div className="bg-MUE-dark-blue flex flex-col items-center justify-center p-8">
-      <h2 className="text-MUE-sky-blue text-5xl font-bold mb-8 w-full text-left">Gallery</h2>
+    <section className="bg-MUE-dark-dark-blue py-16 px-6 lg:px-72">
+      <h2 className="text-4xl font-bold text-MUE-white mb-8">Gallery</h2>
 
-      <div className="overflow-x-auto w-full">
-        <div
-          className="flex"
-          style={{
-            width: containerWidthLg,
-            animation: 'scrollLeft 60s linear infinite', 
-            // ↑ Adjust duration for slower or faster sliding
-          }}
-        >
-          {allSlides.map((slide, index) => (
-            <div key={index} className="flex-none px-4">
-              <Image
-                src={slide}
-                alt={`Slide ${index}`}
-                width={600}
-                height={400}
-                className="w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] h-auto object-cover rounded-md shadow-md"
-              />
-            </div>
-          ))}
+      <div className="grid grid-cols-10 gap-4">
+        {/* Top-left big (4 cols) */}
+        {p1 && (
+          <div className="col-span-4 row-span-1 relative rounded-lg overflow-hidden shadow-md">
+            <Image src={p1} alt="" fill className="object-cover" unoptimized />
+          </div>
+        )}
+
+        {/* Top-right 2×2 inside 6 cols */}
+        <div className="col-span-6 row-span-1 grid grid-cols-2 grid-rows-2 gap-4">
+          {[p2, p3, p4, p5].map(
+            (src, i) =>
+              src && (
+                <div
+                  key={i}
+                  className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md"
+                >
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              )
+          )}
         </div>
+
+        {/* Bottom-left 2×2 inside 6 cols */}
+        <div className="col-span-6 row-span-1 grid grid-cols-2 grid-rows-2 gap-4">
+          {[p6, p7, p8, p9].map(
+            (src, i) =>
+              src && (
+                <div
+                  key={i}
+                  className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md"
+                >
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              )
+          )}
+        </div>
+
+        {/* Bottom-right big (4 cols) */}
+        {p10 && (
+          <div className="col-span-4 row-span-1 relative rounded-lg overflow-hidden shadow-md">
+            <Image src={p10} alt="" fill className="object-cover" unoptimized />
+          </div>
+        )}
       </div>
-
-      {/* Keyframes for infinite left scroll */}
-      <style jsx>{`
-        @keyframes scrollLeft {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-${containerWidthLg / 20}px);
-          }
-        }
-
-        @media (max-width: 1024px) {
-          @keyframes scrollLeft {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-${containerWidthMd / 20}px);
-            }
-          }
-        }
-
-        @media (max-width: 640px) {
-          @keyframes scrollLeft {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-${containerWidthSm / 20}px);
-            }
-          }
-        }
-      `}</style>
-    </div>
+    </section>
   );
 };
 
-export default InfinityScrollCarousel;
+export default ImageCarousel;

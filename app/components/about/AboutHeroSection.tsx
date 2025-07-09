@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const AboutHeroSection: React.FC = () => {
     return (
-        <div className="relative bg-MUE-dark-blue text-MUE-white py-4 md:py-24 lg:py-36 mb-40 px-8 lg:px-4 w-full grid grid-cols-1 lg:grid-cols-8 gap-8 lg:gap-16">
+        <div className="relative text-MUE-white py-4 md:py-24 lg:py-36 mb-40 px-8 lg:px-4 w-full grid grid-cols-1 lg:grid-cols-8 gap-8 lg:gap-16">
             <div className="lg:col-span-5 flex flex-col justify-center lg:ml-28">
                 <h5 className="text-lg md:text-xl uppercase font-semibold">What We Do</h5>
                 <h1 className="text-4xl py-4 mr-8 md:text-[84px] xl-about-hero-section:mr-28 2xl-about-hero-section:mr-8 font-extrabold leading-tight">

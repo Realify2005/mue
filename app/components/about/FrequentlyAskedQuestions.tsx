@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -77,7 +78,7 @@ const FrequentlyAskedQuestions: React.FC = () => {
   };
 
   return (
-    <div className="bg-MUE-dark-blue text-white py-10">
+    <div className="text-white py-10">
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <h1 className="text-5xl font-bold mb-8 font-montserrat">FAQ</h1>
@@ -92,7 +93,7 @@ const FrequentlyAskedQuestions: React.FC = () => {
                 className="border border-MUE-white rounded-lg overflow-hidden"
               >
                 <button
-                  className="w-full flex justify-between items-center px-8 py-4 focus:outline-none text-left"
+                  className="w-full flex justify-between items-center px-8 py-6 focus:outline-none text-left"
                   onClick={() => toggleFAQ(index)}
                 >
                   <span className="font-semibold">
@@ -102,11 +103,20 @@ const FrequentlyAskedQuestions: React.FC = () => {
                     {activeIndex === index ? '-' : '+'}
                   </span>
                 </button>
-                {activeIndex === index && (
-                  <div className="px-8 pb-4 text-left">
-                    <p className="text-sm">{item.answer}</p>
-                  </div>
-                )}
+
+                <AnimatePresence>
+                  {activeIndex === index && (
+                    <motion.div
+                      className="px-8 pb-4 -mt-4 text-left text-MUE-gray"
+                      initial={{ opacity: 0, y: -8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.25 }}
+                    >
+                      <p className="text-sm">{item.answer}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>
@@ -116,7 +126,7 @@ const FrequentlyAskedQuestions: React.FC = () => {
             <h2 className="text-3xl italic text-MUE-yellow text-right font-bold">
               Not What You&apos;re Looking For?
             </h2>
-            <p className="text-sm text-MUE-white text-right py-4">
+            <p className="text-sm text-MUE-white text-right font-bold py-4">
               Shoot us a message, we&apos;ll be more than happy to answer any questions!
             </p>
             <Link

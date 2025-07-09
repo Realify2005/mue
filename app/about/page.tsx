@@ -37,8 +37,8 @@ const AboutPage: React.FC = async () => {
       <AboutHeroSection />
       <Timeline />
       <AboutCommittee />
-      <ImageCarousel slides={photos}/>
       <FrequentlyAskedQuestions />
+      <ImageCarousel slides={photos}/>
 
       <Footer />
     </>

@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import CasualGames from '../components/games/Casual'
@@ -50,4 +50,4 @@ const GamesPage: React.FC = () => {
     )
 }
 
-export default GamesPage
+export default GamesPage */

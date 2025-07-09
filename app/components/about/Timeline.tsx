@@ -6,7 +6,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 const Timeline: React.FC = () => {
   return (
-    <div className="flex flex-col items-center w-full py-10 bg-MUE-dark-blue">
+    <div className="flex flex-col items-center w-full py-10">
       <h2 className="text-4xl font-bold text-white mb-12">Our Journey</h2>
 
       <VerticalTimeline animate={true} lineColor="var(--MUE-white)">

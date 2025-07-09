@@ -6,7 +6,6 @@ const sponsors = [
     { name: "Centrecom", src: "/logos/sponsors/centrecom.png" },
     { name: "GIC", src: "/logos/sponsors/gic.png" },
     { name: "Gigabyte", src: "/logos/sponsors/gigabyte.png" },
-    { name: "GXS", src: "/logos/sponsors/gxs.png" },
     { name: "HungryPanda", src: "/logos/sponsors/hungrypanda.png" },
 ];
 
@@ -14,7 +13,7 @@ const Sponsors: React.FC = () => {
     return (
         <>
             <div className="text-center my-16">
-                <p className="text-MUE-white text-center font-inter text-20 italic font-bold leading-normal">
+                <p className="text-MUE-white text-center font-inter text-20 font-bold leading-normal">
                 Proudly Sponsored By
                 </p>
             </div>
