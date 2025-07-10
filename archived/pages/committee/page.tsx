@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+/*import React, { Suspense } from 'react';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -50,7 +50,7 @@ const CommitteePage: React.FC = async () => {
     <>
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero Section
       <div className="px-5 py-24 md:px-80 flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('../public/background/committee_bg_1.jpg')]">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="my-12 text-3xl font-semibold text-white bg-black inline-block">
@@ -60,7 +60,7 @@ const CommitteePage: React.FC = async () => {
       </div>
 
       <Suspense fallback={<CommitteeSkeleton />}>
-        {/* Render Departments */}
+        {/* Render Departments
         {[
           { title: 'Executives', data: executives, bg: 'bg-gray-100' },
           { title: 'Technical Department', data: technical, bg: 'bg-white' },
@@ -97,7 +97,7 @@ const CommitteePage: React.FC = async () => {
         ))}
       </Suspense>
 
-      {/* Disclaimer */}
+      {/* Disclaimer
       <div className="py-6 px-5 md:px-32 bg-gray-200 text-center">
         <p className="text-sm text-gray-600 italic">
           This page may not include all committee members.
@@ -109,4 +109,4 @@ const CommitteePage: React.FC = async () => {
   );
 };
 
-export default CommitteePage;
+export default CommitteePage;*/

@@ -1,5 +1,41 @@
-{
-    "2023": [
+{    "2025": [
+        {
+            "name": "Fidel Hendrata",
+            "role": "President",
+            "image": "/headshots/fidel_hendrata.jpg"
+        },
+        {
+            "name": "Michael Crowle",
+            "role": "Vice President",
+            "image": "/headshots/michael_crowle.jpg"
+        },
+        {
+            "name": "Ahmad Yasin",
+            "role": "Secretary",
+            "image": "/headshots/ahmad_yasin.jpg"
+        },
+        {
+            "name": "Yvonne Chen",
+            "role": "Treasurer",
+            "image": "/headshots/yvonne_chen.jpg"
+        },
+        {
+            "name": "Clement Chau",
+            "role": "Head of Technical",
+            "image": "/headshots/clement_chau.jpg"
+        },
+        {
+            "name": "Caitlin Low",
+            "role": "Head of Publicity",
+            "image": "/headshots/caitlin_low.jpg"
+        },
+        {
+            "name": "Vishall Krishnan",
+            "role": "Head of Events",
+            "image": "/headshots/vishall_krishnan.jpg"
+        }
+    ],
+    "2024": [
         {
             "name": "Sama Koheil",
             "role": "President",
@@ -36,7 +72,7 @@
             "image": "/headshots/fidel_hendrata.jpg"
         }
     ],
-    "2022": [
+    "2023": [
         {
             "name": "Wara Asahara",
             "role": "President",
@@ -73,7 +109,7 @@
             "image": "/headshots/sama_koheil.jpg"
         }
     ],
-    "2021": [
+    "2022": [
         {
             "name": "Eric Lu",
             "role": "President",
@@ -110,7 +146,7 @@
             "image": "/headshots/anh_vo.jpg"
         }
     ],
-    "2020": [
+    "2021": [
         {
             "name": "Zhi Charles",
             "role": "President",
@@ -147,7 +183,7 @@
             "image": "/headshots/anh_vo.jpg"
         }
     ],
-    "2019": [
+    "2020": [
         {
             "name": "Chen Yi",
             "role": "President",

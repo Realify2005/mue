@@ -51,8 +51,7 @@ const Navbar: React.FC = () => {
                   <li className="hover:text-MUE-yellow"><Link href='/'>Welcome Page</Link></li>
                   <li className="hover:text-MUE-yellow"><Link href='/about'>About Us</Link></li>
                   <li className="hover:text-MUE-yellow"><Link href='/linktree'>Linktree</Link></li>
-                  <li className="hover:text-MUE-yellow"><Link href='/committee'>Committee</Link></li>
-                  <li className="hover:text-MUE-yellow"><Link href='/past-committee'>Past Committee</Link></li>
+                  <li className="hover:text-MUE-yellow"><Link href='/alumni'>Alumni</Link></li>
                   <li className="hover:text-MUE-yellow"><Link href='/membership'>Membership</Link></li>
                 </ul>
               </li>
@@ -82,15 +81,14 @@ const Navbar: React.FC = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="dropdown-content menu bg-MUE-dark-dark-blue rounded-box mt-72 z-10 w-52 p-2 shadow-sm"
+                className="dropdown-content menu bg-MUE-dark-dark-blue rounded-box mt-60 z-10 w-52 p-2 shadow-sm"
               >
                 {[
                   /* When changing the number of links in dropdown, please change the top margin of parent dropdown (mt) */
                   { href: '/',             label: 'Welcome Page' },
                   { href: '/about',        label: 'About Us'      },
                   { href: '/linktree',     label: 'Linktree'      },
-                  { href: '/committee',    label: 'Committee'     },
-                  { href: '/past-committee', label: 'Past Committee' },
+                  { href: '/alumni',    label: 'Alumni'     },
                   { href: '/membership',   label: 'Membership'    },
                 ].map(({ href, label }) => (
                   <li key={href}>
