@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
+import { tagColors } from '../events/tagColors';
 
 interface Event {
   id: number;
@@ -17,17 +18,6 @@ interface Event {
   isNext: boolean;
   datetime: string;
 }
-
-const tagColors: { [key: string]: string } = {
-  "📅 Weeklies": 'bg-pink-200',
-  "🏆 Tournament": 'bg-yellow-200',
-  "🌏 Collab": 'bg-purple-200',
-  "📚 Trivia": 'bg-green-200',
-  "❄️ Winterfest": "bg-blue-400",
-  "✨ Special": "bg-orange-100"
-  // add more tag-to-color mappings as needed
-};
-
 
 const UpcomingEvents = ({ events }: { events: Event[] }) => {
   const [paused, setPaused] = useState(false);

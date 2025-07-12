@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import dayjs from 'dayjs';
+import { tagColors } from './tagColors';
 
 interface Event {
   id?: number;
@@ -12,17 +14,9 @@ interface Event {
   posterUrl: string;
   externalLink?: string | null;
   isNext?: boolean;
-  datetime?: string;
+  mostRecent?: boolean;
+  date?: string;
 }
-
-const tagColors: { [key: string]: string } = {
-  "📅 Weeklies": 'bg-pink-200 text-black',
-  "🏆 Tournament": 'bg-yellow-200 text-black',
-  "🌏 Collab": 'bg-purple-200 text-white',
-  "📚 Trivia": 'bg-green-200 text-black',
-  "❄️ Winterfest": 'bg-blue-400 text-white',
-  "✨ Special": 'bg-orange-300 text-black',
-};
 
 type EventCardProps = { event: Event };
 
@@ -32,9 +26,9 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
       <div className="flex flex-col h-full rounded-2xl bg-MUE-dark-dark-blue-content overflow-hidden cursor-pointer filter drop-shadow-[0_0_20px_var(--MUE-sky-blue)] transition-transform hover:scale-105">
         {/* Poster + NEXT UP badge */}
         <div className="relative h-80">
-          {event.isNext && (
+          {(event.isNext || event.mostRecent) && (
             <span className="absolute top-4 left-4 bg-MUE-yellow text-black text-sm font-bold px-3 py-1 rounded-lg z-10">
-              NEXT&nbsp;UP
+              {event.mostRecent ? 'MOST RECENT' : 'NEXT UP'}
             </span>
           )}
           <Image
@@ -71,7 +65,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
 
             {/* Datetime */}
             <p className="text-MUE-sky-blue text-base mt-4">
-              {event.datetime}
+              {event.date ? dayjs(event.date).format('D MMM YYYY, h:mm A') : ''}
             </p>
 
             {/* Location */}

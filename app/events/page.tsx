@@ -3,8 +3,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { fetchEventsInfo } from '../components/api/fetchEventsInfo';
 import { fetchMostRecentEventsNotionUpdate } from '../components/api/fetchMostRecentEventsNotionUpdate';
-import EventsPageContent from '../components/events/EventsPageContent';
 import EventsSkeleton from '../components/events/EventsSkeleton';
+import EventsPageContent from '../components/events/EventsPageContent';
+import WeeklyOnlineEvents from '../components/events/WeeklyOnlineEvents';
 
 export const metadata = {
   title: 'Events | MUE',
@@ -29,8 +30,6 @@ export const revalidate = 0;
 const EventsPage: React.FC = async () => {
   const data = await fetchEventsInfo();
   const now = new Date();
-  const past30Days = new Date();
-  past30Days.setDate(now.getDate() - 30);
 
   const mostRecentUpdate = await fetchMostRecentEventsNotionUpdate();
   const lastUpdatedAt = new Date(mostRecentUpdate).toLocaleString('en-GB', {
@@ -43,21 +42,13 @@ const EventsPage: React.FC = async () => {
     hour12: true
   });
 
-  const upcomingEvents = data.filter(event => new Date(event.date) >= now);
-  const pastEvents = data.filter(event => new Date(event.date) < now && new Date(event.date) >= past30Days);
+  const upcomingEvents = data.filter(event => new Date(event.date ?? '') >= now);
+  const pastEvents = data.filter(event => new Date(event.date ?? '') < now).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
+
 
   return (
     <>
       <Navbar />
-      <div className="px-5 py-8 md:px-80 flex flex-col justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('../public/background/events_bg_1.jpg')]">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="my-12 text-3xl font-semibold text-white bg-black inline-block">Events</h2>
-          <p className="mb-12 text-1xl font-semibold text-white bg-black">
-            Browse through our exciting list of events. Lots of fun here!
-          </p>
-        </div>
-      </div>
-      {/* Pass events data to the client-side component */}
       <Suspense fallback={<EventsSkeleton />}>
         <EventsPageContent
           upcomingEvents={upcomingEvents}
@@ -65,6 +56,7 @@ const EventsPage: React.FC = async () => {
           lastUpdatedAt={lastUpdatedAt}
         />
       </Suspense>
+      <WeeklyOnlineEvents />
       <Footer />
     </>
   );

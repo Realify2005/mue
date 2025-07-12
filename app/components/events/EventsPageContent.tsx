@@ -13,7 +13,8 @@ interface Event {
   posterUrl: string;
   externalLink?: string | null;
   isNext?: boolean;
-  datetime?: string;
+  mostRecent?: boolean;
+  date?: string;
 }
 
 interface EventsPageContentProps {
@@ -22,85 +23,71 @@ interface EventsPageContentProps {
   lastUpdatedAt: string;
 }
 
-const categories = [
-  "📅 Weeklies",
-  "🏆 Tournament",
-  "🌏 Collab",
-  "📚 Trivia",
-  "❄️ Winterfest",
-  "✨ Special"
-];
+const EventsPageContent: React.FC<EventsPageContentProps> = ({
+  upcomingEvents,
+  pastEvents,
+  lastUpdatedAt,
+}) => {
+  const [tab, setTab] = useState<'upcoming' | 'past'>('upcoming');
 
-const EventsPageContent: React.FC<EventsPageContentProps> = ({ upcomingEvents, pastEvents, lastUpdatedAt }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const eventsToShow = tab === 'upcoming' ? upcomingEvents : pastEvents;
 
-  const handleCategoryClick = (category: string) => {
-    if (selectedCategory === category) {
-      setSelectedCategory(null);
-    } else {
-      setSelectedCategory(category);
-    }
-  };
+  // Mark first event as next upcoming
+  if (tab === 'upcoming' && eventsToShow.length > 0) {
+    eventsToShow[0].isNext = true;
+  }
+  
+  const mostRecentEvent = [...pastEvents]
+    .filter(e => e.date)
+    .sort((a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime())[0];
 
-  const filteredUpcomingEvents = selectedCategory 
-    ? upcomingEvents.filter(event => event.tags.includes(selectedCategory)) 
-    : upcomingEvents;
+  if (mostRecentEvent) {
+    mostRecentEvent.mostRecent = true;
+  }
 
-  const filteredPastEvents = selectedCategory 
-    ? pastEvents.filter(event => event.tags.includes(selectedCategory)) 
-    : pastEvents;
 
   return (
-    <div className="text-MUE-black bg-gradient-to-r from-indigo-100 from-10% via-sky-100 via-30% to-emerald-100 to-90%">
-      {/* Category Filters */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:justify-center gap-4 pt-8">
-        {categories.map((category) => (
+    <section className="px-5 py-16 text-white">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold">Discover Events</h2>
+        <div className="mt-8 flex justify-center gap-4">
           <button
-            key={category}
-            onClick={() => handleCategoryClick(category)}
-            className={`py-2 px-4 rounded-lg border-2 transition ${
-              selectedCategory === category 
-                ? 'border-blue-500 bg-blue-100' 
-                : 'border-gray-300'
-            } hover:shadow-lg`}
+            onClick={() => setTab('upcoming')}
+            className={`px-6 py-2 rounded-full font-semibold text-sm transition 
+              ${tab === 'upcoming'
+                ? 'bg-MUE-sky-blue text-black'
+                : 'border border-MUE-sky-blue text-MUE-sky-blue hover:bg-MUE-sky-blue hover:text-black'}
+            `}
           >
-            {category}
+            UPCOMING
           </button>
-        ))}
+          <button
+            onClick={() => setTab('past')}
+            className={`px-6 py-2 rounded-full font-semibold text-sm transition 
+              ${tab === 'past'
+                ? 'bg-MUE-sky-blue text-black'
+                : 'border border-MUE-sky-blue text-MUE-sky-blue hover:bg-MUE-sky-blue hover:text-black'}
+            `}
+          >
+            PAST
+          </button>
+        </div>
       </div>
 
-
-      <div className="px-5 pb-5 md:px-80 flex flex-col justify-center items-center py-20">
-        <p className="text-sm text-gray-500 mb-4">
-          All times shown are in <span className="font-bold text-black">AEST</span>.
-        </p>
-        <p className="text-sm text-gray-500 mb-4">
-          Last updated at {lastUpdatedAt}. 
-        </p>
-
-        <h1 className="text-4xl font-bold mb-8">Upcoming Events</h1>
-        {filteredUpcomingEvents.length > 0 ? (
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredUpcomingEvents.map(event => <EventCard key={event.name} event={event} />)}
+      {/* Event Cards */}
+      <div className="flex flex-col items-center">
+        {eventsToShow.length > 0 ? (
+          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {eventsToShow.map((event) => (
+              <EventCard key={event.name} event={event} />
+            ))}
           </div>
         ) : (
-          <p>No upcoming events for this category :(</p>
+          <p className="text-gray-400 text-sm">No events available.</p>
         )}
-
-        <h1 className="text-4xl font-bold mt-12 mb-8">Past Events</h1>
-        {filteredPastEvents.length > 0 ? (
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredPastEvents.map(event => <EventCard key={event.name} event={event} />)}
-          </div>
-        ) : (
-          <p>No past events in the last 30 days for this category</p>
-        )}
-
-        <p className="text-sm text-gray-500 my-4">
-          Only events held in the past <span className="font-bold text-black">30 days</span> are shown. 
-        </p>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -23,14 +23,14 @@ const highlights: Highlight[] = [
     title: 'Esport Tournaments',
     description: 'Got a competitive edge? Sign up for our inter-uni esport tournaments.',
     button: { text: 'ESPORTS ›', href: '/games' },
-    imageSrc: '/photos/gic2025_photo_1.png',
+    imageSrc: '/photos/gic2025_photo_1.jpg',
     reverse: true,
   },
   {
     title: 'Friday Weekly Games',
     description: 'Join us on campus every Friday with 2000+ students for casual and competitive play.',
     button: { text: 'DISCORD ›', href: process.env.MUE_DISCORD_PERMALINK || 'https://discord.gg/NHAFvPqTDt' },
-    imageSrc: '/photos/weeklies2025_photo_1.png',
+    imageSrc: '/photos/weeklies2025_photo_1.jpg',
   },
 ];
 
