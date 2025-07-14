@@ -4,16 +4,17 @@ const notion = new Client({ auth: process.env.NOTION_API_TOKEN });
 
 export async function fetchLinktreeLayout() {
     const databaseId = process.env.NOTION_LINKTREE_SECTION_DATABASE_ID;
-    const response = await notion.query({
-
+    const response = await notion.databases.query({
+        database_id: databaseId,
     });
 
-    return response;
+    return response.results;
 }
 
 export async function fetchLinktreeData() {
     const databaseId = process.env.NOTION_LINKTREE_LINKS_DATABASE_ID;
-    const response = await notion.query({
-
+    const response = await notion.databases.query({
+        database_id: databaseId,
     });
+    return response.results;
 }

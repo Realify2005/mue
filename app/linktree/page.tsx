@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Image from 'next/image';
 import LinktreeBar from '../components/LinktreeBar';
+import {fetchLinktreeLayout, fetchLinktreeData} from '../components/api/fetchLinktreeInfo';
 
 export const metadata = {
   title: 'Linktree | MUE',
@@ -22,7 +23,11 @@ export const metadata = {
   },
 }
 
-const LinkPage = () => {
+const LinkPage = async () => {
+  // var layout = await fetchLinktreeLayout();
+  // console.log(layout);
+  var data = await fetchLinktreeData();
+  console.log(data);
   return (
     <>
       <Navbar />
