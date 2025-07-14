@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
   return (
     <section
       className="
-        relative w-full md:h-screen bg-MUE-dark-blue
+        relative w-full md:h-screen
         overflow-hidden px-8 lg:px-40 pt-24 pb-36
         flex items-center bg-cover bg-center
         bg-[url('/photos/gic2024_photo_5.jpg')]

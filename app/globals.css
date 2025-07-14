@@ -10,7 +10,8 @@
   --MUE-dark-blue: #000F46;
   --MUE-dark-dark-blue: #010519;
   --MUE-dark-dark-blue-content: #000619;
-  --MUE-alumni-box-color: #000929;
+  --MUE-dark-blue-box: #000929;
+  --MUE-esports-dark-blue-box: #080F2C;
   --MUE-sky-blue: #46C8F0;
   --MUE-sky-blue-hover: #3CAACB;
   --MUE-ocean-blue: #297B95;
@@ -18,6 +19,8 @@
   --MUE-white: #FAF9F6;
   --MUE-gray: #8188a2;
   --MUE-black: #0B1215;
+  --MUE-green: #9FB826,
+  --MUE-lime: #BFD93F,
   --MUE-yellow: #FFD629;
   --MUE-yellow-hover: #967D13;
   --MUE-pink: #EB7BBE;

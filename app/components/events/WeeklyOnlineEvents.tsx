@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 const WeeklyOnlineEvents: React.FC = () => {
   return (
-    <section className="mt-24 mb-20 px-6 lg:px-60">
-      <h2 className="text-4xl font-extrabold text-white text-center mb-10">
+    <section className="px-6 lg:px-60">
+      <h2 className="text-4xl font-extrabold text-white text-center py-20">
         Other Events
       </h2>
       <div className="flex flex-col md:flex-row items-center md:items-start rounded-2xl overflow-hidden shadow-2xl">

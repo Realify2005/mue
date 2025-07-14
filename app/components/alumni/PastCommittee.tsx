@@ -41,7 +41,7 @@ const PastCommittee: React.FC = () => {
         return (
           <section key={year} id={year} className="mb-16 scroll-mt-28">
             <h2 className="text-4xl font-bold text-center text-MUE-white mb-8">{year}</h2>
-            <div className="bg-MUE-alumni-box-color rounded-2xl p-8 mx-auto max-w-5xl">
+            <div className="bg-MUE-dark-blue-box rounded-2xl p-8 mx-auto max-w-5xl">
               <h3 className="text-xl font-semibold text-MUE-sky-blue mb-4">Executive Team</h3>
               <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-6">
                 {exec.map(member => (

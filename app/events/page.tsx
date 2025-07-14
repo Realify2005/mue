@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { fetchEventsInfo } from '../components/api/fetchEventsInfo';
 import { fetchMostRecentEventsNotionUpdate } from '../components/api/fetchMostRecentEventsNotionUpdate';
-import EventsSkeleton from '../components/events/EventsSkeleton';
 import EventsPageContent from '../components/events/EventsPageContent';
 import WeeklyOnlineEvents from '../components/events/WeeklyOnlineEvents';
 
@@ -49,13 +48,11 @@ const EventsPage: React.FC = async () => {
   return (
     <>
       <Navbar />
-      <Suspense fallback={<EventsSkeleton />}>
-        <EventsPageContent
-          upcomingEvents={upcomingEvents}
-          pastEvents={pastEvents}
-          lastUpdatedAt={lastUpdatedAt}
-        />
-      </Suspense>
+      <EventsPageContent
+        upcomingEvents={upcomingEvents}
+        pastEvents={pastEvents}
+        lastUpdatedAt={lastUpdatedAt}
+      />
       <WeeklyOnlineEvents />
       <Footer />
     </>
