@@ -24,10 +24,10 @@ export const metadata = {
 }
 
 const LinkPage = async () => {
-  // var layout = await fetchLinktreeLayout();
+  var layout = await fetchLinktreeLayout();
   // console.log(layout);
   var data = await fetchLinktreeData();
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <Navbar />
