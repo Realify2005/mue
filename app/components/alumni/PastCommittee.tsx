@@ -19,7 +19,7 @@ const Avatar: React.FC<{ src?: string; alt: string; size?: number }> = ({ src, a
   );
 };
 
-const executiveRoles = ['President', 'Vice-President', 'Secretary', 'Treasurer'];
+const executiveRoles = ['President', 'Vice President', 'Secretary', 'Treasurer'];
 
 const PastCommittee: React.FC = () => {
   const [data, setData] = useState<Record<string, PastCommitteeMember[]>>({});
