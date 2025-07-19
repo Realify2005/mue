@@ -33,8 +33,9 @@ export async function fetchLinktreeData() {
         name: page.properties.Name.title[0].plain_text,
         position: page.properties.itemOrdering.number,
         link: page.properties.Link.url,
-        section: page.properties.Section.relation[0].id
+        section: page.properties.Section.relation[0].id,
+        icon: page.properties.Icon.files[0]?.file.url,
         };
     });
-    return response.results;
+    return indexedResults;
 }
