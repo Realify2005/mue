@@ -13,23 +13,26 @@ export interface Role {
 export const availableRoles: Role[] = [
   {
     title: "Publicity Coodinator",
-    description: "Help shape MUE’s image—run socials, create content, and promote epic events!"
+    description: "Help shape MUE's image—run socials, create content, and promote epic events!"
   },
   {
     title: "Events Coordinator",
-    description: "Plan and run epic esports events, from tournaments to social nights."
+    description: "Plan and run epic events, from tournaments to social nights."
   },
   {
     title: "Technical Coordinator",
-    description: "Keep our events running smoothly behind the scenes."
+    description: "Help manage the club's custom discord bot and website!"
   },
   {
     title: "Games Manager",
-    description: "Curate and manage the games for our events."
+    description: "Manage the casual side of our games."
   },
   {
-    title: "General Coordinator",
+    title: "Esports Manager",
+    description: "Manage the esports/competitive side of our games."
+  },
+  {
+    title: "General Committee",
     description: "Oversee the smooth operation of all MUE activities."
   },
-
 ]; 

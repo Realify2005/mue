@@ -2,14 +2,10 @@ import React from "react";
 import PerkCard from "./PerkCard";
 import { membershipPerks } from "./data/membershipPerks";
 
-/**
- * Membership Perks Section
- * @returns {JSX.Element} Section displaying membership perks in a grid layout
- */
 const MembershipPerks: React.FC = () => {
   return (
-    <section className="mb-5">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="mb-16 px-4 sm:px-6">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-montserrat font-bold text-3xl tracking-tight text-white sm:text-4xl">
@@ -18,8 +14,19 @@ const MembershipPerks: React.FC = () => {
         </div>
 
         {/* Perks Grid */}
-        <div className="mx-auto mt-12 max-w-6xl flex items-center justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 items-center">
+        <div className="mx-auto mt-12 max-w-6xl">
+          <div
+            className="
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              md:grid-cols-3
+              lg:grid-cols-4
+              xl:grid-cols-5
+              gap-y-10 gap-x-6
+              justify-items-center
+            "
+          >
             {membershipPerks.map((perk, index) => (
               <PerkCard
                 key={index}

@@ -19,8 +19,8 @@ export const membershipPerks: Perk[] = [
   },
   {
     imageSrc: "/photos/membership/competitive_casual_gaming.png",
-    imageAlt: "Competitive & Casual Gaming",
-    text: "Competitive & Casual Gaming",
+    imageAlt: "Represent the University in Esports",
+    text: "Represent the University in Esports",
   },
   {
     imageSrc: "/photos/membership/exclusive_events.png",
@@ -29,12 +29,12 @@ export const membershipPerks: Perk[] = [
   },
   {
     imageSrc: "/photos/membership/weekly_games_food.png",
-    imageAlt: "Weekly games & free food",
-    text: "Weekly games & free food",
+    imageAlt: "Enjoy free food during our weeklies event",
+    text: "Enjoy free food during our weeklies event",
   },
   {
     imageSrc: "/photos/membership/join_discord.png",
-    imageAlt: "Join our discord for more !!",
-    text: "Join our discord for more !!",
+    imageAlt: "Members-only discord role & channel",
+    text: "Members-only discord role & channel",
   },
 ]; 

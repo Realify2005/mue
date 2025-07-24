@@ -36,9 +36,13 @@ const CommitteeMembers: React.FC<CommitteeMembersProps> = ({ members }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const departmentMatch = categories.find((c) => c.label === activeTab)?.match;
-  const filteredMembers = members.filter((member) =>
-    member.department?.includes(departmentMatch || '')
-  );
+  const filteredMembers = members
+    .filter((member) => member.department?.includes(departmentMatch || ''))
+    .sort((a, b) => {
+      const aIsHead = a.role.toLowerCase().startsWith("head");
+      const bIsHead = b.role.toLowerCase().startsWith("head");
+      return Number(bIsHead) - Number(aIsHead); // department heads to be displayed first
+    });
 
   return (
     <div className="min-h-screen py-24 px-6 text-white" ref={ref}>

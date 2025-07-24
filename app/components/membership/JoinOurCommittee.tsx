@@ -12,13 +12,13 @@ const JoinOurCommittee: React.FC = () => {
     <section
       className="
         relative w-full min-h-screen
-        overflow-hidden px-8 lg:px-40 pt-4 pb-4
+        overflow-hidden px-8 lg:px-80 pt-4 pb-4
         flex items-center bg-cover bg-center
         bg-MUE-dark-dark-blue
       "
     >
       {/* content grid */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-5 w-full items-center">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-5 w-full items-center gap-8 md:gap-20">
         {/* left side image */}
         <div className="flex justify-center md:justify-start md:col-span-2">
           <div className="relative w-[280px] h-[280px] lg:w-[400px] lg:h-[400px]">
@@ -34,7 +34,7 @@ const JoinOurCommittee: React.FC = () => {
 
         {/* right text */}
         <div className="text-white md:col-span-3">
-          <h1 className="font-montserrat font-bold leading-tight text-3xl sm:text-4xl lg:text-5xl">
+          <h1 className="font-montserrat font-extrabold leading-tight text-3xl sm:text-4xl lg:text-5xl">
             <span className="text-white">Join our committee</span>
           </h1>
 

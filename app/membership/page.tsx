@@ -5,6 +5,7 @@ import MembershipLandingPage from "../components/membership/MembershipLandingPag
 import MembershipPerks from "../components/membership/MembershipPerks";
 import JoinOurCommittee from "../components/membership/JoinOurCommittee";
 import AvailableRoles from "../components/membership/AvailableRoles";
+import CommitteeInterest from "../components/membership/CommitteeInterest";
 
 export const metadata = {
   title: "Membership | MUE",
@@ -40,6 +41,7 @@ const MembershipsPage: React.FC = () => {
       <MembershipPerks />
       <JoinOurCommittee />
       <AvailableRoles />
+      <CommitteeInterest />
 
       <Footer />
     </>

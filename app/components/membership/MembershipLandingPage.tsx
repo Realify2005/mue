@@ -4,29 +4,25 @@ import Link from "next/link";
 import Image from "next/image";
 import "@fontsource/audiowide";
 
-/**
- * Membership Landing Page Hero Section
- * @returns {JSX.Element} Hero section with membership information and CTA buttons
- */
-const MembershipLandingPage: React.FC = () => {
+const MembershipLandingPage: React.FC = (): JSX.Element => {
   return (
     <section
       className="
         relative w-full min-h-screen
-        overflow-hidden px-8 lg:px-40 pb-20
+        overflow-hidden px-4 sm:px-8 lg:px-72 pb-16
         flex items-center bg-cover bg-center
         bg-MUE-dark-dark-blue
       "
     >
       {/* content grid */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-5 w-full items-center">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-5 w-full items-center gap-8 md:gap-20">
         {/* left text */}
         <div className="text-white md:col-span-3">
           <h1 className="font-montserrat font-bold leading-tight text-3xl sm:text-4xl lg:text-5xl">
-            <span className="text-white">Become a member today</span>
+            Become a member today
           </h1>
 
-          <p className="font-montserrat font-normal mt-4 text-xl md:text-2xl pb-4">
+          <p className="font-montserrat font-normal mt-3 text-base sm:text-lg md:text-xl pb-4">
             Join our club to connect with fellow gamers, compete in tournaments,
             and enjoy exclusive member perks!
           </p>
@@ -36,8 +32,8 @@ const MembershipLandingPage: React.FC = () => {
               href="https://umsu.unimelb.edu.au/buddy-up/clubs/clubs-listing/join/6725/"
               target="_blank"
               className="
-                bg-[#9FB826] hover:bg-[#8FA726]
-                text-black font-bold py-3 px-6 rounded-full
+                bg-MUE-green hover:bg-MUE-lime
+                text-black py-3 px-6 rounded-full
                 transition flex items-center gap-2
               "
             >
@@ -46,15 +42,14 @@ const MembershipLandingPage: React.FC = () => {
           </div>
         </div>
 
-        {/* right side image */}
+        {/* right image */}
         <div className="flex justify-center md:justify-end md:col-span-2">
-          <div className="relative w-[280px] h-[280px] lg:w-[400px] lg:h-[400px]">
+          <div className="relative w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] lg:w-[430px] lg:h-[430px]">
             <Image
-              src="/photos/membership_landing.png"
+              src="/photos/membership/membership_landing.png"
               alt="MUE Members"
-              width={400}
-              height={400}
-              className="rounded-2xl shadow-lg object-cover w-full h-full"
+              fill
+              className="rounded-2xl shadow-lg object-cover"
             />
           </div>
         </div>
