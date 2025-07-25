@@ -44,7 +44,6 @@ const CommitteeMembers: React.FC<CommitteeMembersProps> = ({ members }) => {
       return Number(bIsHead) - Number(aIsHead); // department heads to be displayed first
     });
 
-
   return (
     <div className="min-h-screen py-24 px-6 text-white" ref={ref}>
       {/* Heading */}
